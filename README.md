@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+# HIV Fellowship v3
+
+This is the third version of the HIV Clinical Fellowship website, built with Next.js (App Router), React, and TypeScript. All page content is driven by JSON files in `/data`, and images are stored under `/public/images`. The site is deployed on Vercel.
+
+## Tech Stack
+
+- Next.js (App Router)
+- React
+- TypeScript
+- JSON data files
+- Vercel
+
+## Project Structure
+
+```
+hivfellowship-v3/
+├── app/
+│   ├── layout.tsx           # Root layout (header/footer)
+│   ├── page.tsx             # About page (home)
+│   ├── about/
+│   │   └── page.tsx         # About section
+│   ├── program/
+│   │   ├── page.tsx         # Program overview
+│   │   ├── partnerships/
+│   │   │   └── page.tsx     # Partnerships
+│   │   └── benefits/
+│   │       └── page.tsx     # Overview & benefits
+│   ├── curriculum/
+│   │   └── page.tsx         # Curriculum page
+│   ├── who-we-are/
+│   │   ├── page.tsx         # Who We Are overview
+│   │   ├── faculty/
+│   │   │   └── page.tsx     # Faculty
+│   │   └── fellows/
+│   │       └── page.tsx     # Fellows
+│   └── apply/
+│       └── page.tsx         # Apply page
+├── data/                    # JSON content files
+│   ├── about.json
+│   ├── program.json
+│   ├── curriculum.json
+│   ├── faculty.json
+│   ├── fellows.json
+│   └── apply.json
+├── public/
+│   └── images/              # All page-specific assets
+├── components/
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   └── Layout.tsx
+├── next.config.js
+├── tsconfig.json
+└── package.json
+```
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies**  
+   ```bash
+   npm install
+   # or yarn install
+   # or pnpm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. **Run the development server**  
+   ```bash
+   npm run dev
+   # or yarn dev
+   # or pnpm dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Data
+
+All page content lives in `/data` as JSON files. Update these files to change headings, copy, lists, and tables without touching component code.
+
+## Images
+
+Place your image assets in `/public/images` within the folder for each page (e.g. `about/`, `program/partnerships/`, etc.). Reference them with Next.js’s `<Image>` component, e.g.:
+```tsx
+<Image src="/images/about/team.jpg" width={600} height={400} alt="Team" />
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Commit your changes:
+   ```bash
+   git add .
+   git commit -m "chore: update README"
+   ```
+2. Push to GitHub and link the repo in Vercel. New pushes to `main` auto-deploy.
