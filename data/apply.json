@@ -1,0 +1,11 @@
+
+
+{
+  "roles": ["Family Medicine", "Internal Medicine", "Med-Peds"],
+  "eligibility": "Board eligible or certified; no visa support",
+  "maxCandidates": 4,
+  "contact": {
+    "name": "Shanna Livermore, MPH",
+    "email": "shanna.livermore@lundquist.org"
+  }
+}

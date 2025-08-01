@@ -1,0 +1,30 @@
+
+
+{
+  "year1": {
+    "session1": [
+      "Clinical rotations at Rand Schrader, LAC+USC ED, Jail Clinic, Street Medicine"
+    ],
+    "session2": [
+      "Continuity clinic, didactics, case conferences"
+    ]
+  },
+  "year2": {
+    "clinical": [
+      "Independent decision-making rotations, precepting juniors"
+    ],
+    "scholarship": [
+      "Scholarly project planning and execution, national presentations"
+    ]
+  },
+  "didactics": [
+    "ART guidelines",
+    "Resistance training",
+    "Case studies"
+  ],
+  "teaching": [
+    "Journal clubs",
+    "Resident preceptorship",
+    "Community lectures"
+  ]
+}

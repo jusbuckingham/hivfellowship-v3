@@ -1,0 +1,47 @@
+{
+  "current": [
+    {
+      "name": "Kenya Bingham-Psalms, MD",
+      "classOf": 2026,
+      "bio": "Growing up in a military family, Dr. Bingham-Psalms earned a BA in Spanish Language and Literature from UC Berkeley and was among the first US graduates from the Latin American School of Medicine in Havana. Her research interests include healthcare disparities in HIV prevention, awareness, and education.",
+      "image": "/images/who-we-are/fellows/kenya-bingham.jpg"
+    },
+    {
+      "name": "Thomasina Blackwater, MD",
+      "classOf": 2027,
+      "bio": "A Diné (Navajo) physician from New Mexico, Dr. Blackwater earned her MPH in Maternal and Child Health and completed her MD at University of Arizona. She focuses on HIV primary care, addiction medicine, and stigma reduction in clinical settings.",
+      "image": "/images/who-we-are/fellows/thomasina-blackwater.jpg"
+    },
+    {
+      "name": "Heather Wynne, MD",
+      "classOf": 2027,
+      "bio": "Dr. Wynne is a Family Medicine physician and graduate of Charles R. Drew University. She has research interests in quality improvement, narrative medicine in HIV care, and reducing disparities in outcomes.",
+      "image": "/images/who-we-are/fellows/heather-wynne.jpg"
+    },
+    {
+      "name": "Tiffany Yu, MD",
+      "classOf": 2027,
+      "bio": "Dr. Yu, raised in the Philippines and Southern California, is committed to health equity and compassionate HIV care. She has experience in medical missions and biopsychosocial approaches to care.",
+      "image": "/images/who-we-are/fellows/tiffany-yu.jpg"
+    }
+  ],
+  "alumni": [
+    { "name": "Licho Aguilera, MD", "classOf": 2025 },
+    { "name": "Bianca Hill, MD, MPH", "classOf": 2025 },
+    { "name": "Mark Leiber, MD", "classOf": 2025 },
+    { "name": "Zachariah Badii, MD", "classOf": 2025 },
+    { "name": "Tri Trang, MD, AAHIVS", "classOf": 2022 },
+    { "name": "Jonathan Kao, MD, AAHIVS", "classOf": 2022 },
+    { "name": "Emma Allseits, MD, AAHIVS", "classOf": 2021 },
+    { "name": "Jessica Schneider, MD, AAHIVS", "classOf": 2020 },
+    { "name": "Norris Tran Duc, MD, AAHIVS", "classOf": 2020 },
+    { "name": "Kevin Tangonan, DO, AAHIVS", "classOf": 2020 },
+    { "name": "Michael Stefanowicz, MD, AAHIVS", "classOf": 2020 },
+    { "name": "Jolie Leblanc, MD, AAHIVS", "classOf": 2019 },
+    { "name": "Rafael Chiquillo-Sosa, MD, AAHIVS", "classOf": 2019 },
+    { "name": "Summer Drake, DO, AAHIVS", "classOf": 2019 },
+    { "name": "Becca Cohen, MD, MPH, AAHIVS", "classOf": 2018 },
+    { "name": "Lauren Wolchok, MD, AAHIVS", "classOf": 2018 },
+    { "name": "Revery Barnes, MD, AAHIVS", "classOf": 2018 }
+  ]
+}

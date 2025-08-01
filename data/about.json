@@ -1,0 +1,35 @@
+
+
+{
+  "title": "About HIV Clinical Fellowship",
+  "purpose": "Train primary care physicians in advanced HIV care and develop future leaders in HIV medicine.",
+  "established": 2001,
+  "description": [
+    "As the HIV epidemic evolves, there is a need for physicians trained in full-scope HIV care.",
+    "Our two-year fellowship equips physicians to serve complex populations and lead in medical education, research, and advocacy."
+  ],
+  "highlights": [
+    "Committed to comprehensive care for vulnerable communities",
+    "Leadership training in healthcare and policy",
+    "Scholarship in health systems research"
+  ],
+  "coreTraining": [
+    "HIV Primary Care",
+    "HIV Sub-specialty Care",
+    "Viral Hepatitis",
+    "Addiction Medicine",
+    "LGBTQ+ Healthcare",
+    "Gender Affirming Care",
+    "Correctional Health",
+    "Street Medicine"
+  ],
+  "trainingSites": [
+    "Los Angeles General Medical Center",
+    "Rand Schrader Clinic",
+    "MLK - Oasis Clinic",
+    "USC Street Medicine",
+    "LA County Jail",
+    "APLA Health",
+    "UCLA National Clinical Scholars"
+  ]
+}
