@@ -3,33 +3,32 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="bg-white shadow">
-      <div className="container mx-auto px-8 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold">HIV Clinical Fellowship</h1>
+    <header className="bg-purple-700 text-white">
+      <div className="max-w-7xl mx-auto px-4 py-3">
         <nav>
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-8 list-none pl-0 m-0">
             <li>
-              <Link href="/" className="hover:underline">
+              <Link href="/" className="uppercase hover:underline">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/program" className="hover:underline">
-                Program
-              </Link>
-            </li>
-            <li>
-              <Link href="/curriculum" className="hover:underline">
+              <Link href="/curriculum" className="uppercase hover:underline">
                 Curriculum
               </Link>
             </li>
             <li>
-              <Link href="/who-we-are" className="hover:underline">
+              <Link href="/program" className="uppercase hover:underline">
+                Program
+              </Link>
+            </li>
+            <li>
+              <Link href="/who-we-are" className="uppercase hover:underline">
                 Who We Are
               </Link>
             </li>
             <li>
-              <Link href="/apply" className="hover:underline">
+              <Link href="/apply" className="uppercase hover:underline">
                 Apply
               </Link>
             </li>
