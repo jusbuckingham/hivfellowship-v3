@@ -1,9 +1,8 @@
 import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'HIV Clinical Fellowship',
   description: '…',
 };
@@ -11,11 +10,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
+      <body className="flex flex-col min-h-screen bg-white">
         <Header />
-        <main className="flex-1 container mx-auto px-8 py-12">
-          {children}
-        </main>
+        {children}
         <Footer />
       </body>
     </html>

@@ -1,23 +1,25 @@
-
-
 // app/program/partnerships/page.tsx
 
-import React from 'react';
 import Layout from '../../../components/Layout';
 import program from '../../../data/program.json';
 
 export default function PartnershipsPage() {
   return (
     <Layout>
-      <section className="px-8 py-12">
-        <h1 className="text-3xl font-bold mb-6">Partnerships</h1>
-        {program.partnerships.map((p, idx) => (
-          <div key={idx} className="mb-6">
-            <h2 className="text-xl font-semibold">{p.name}</h2>
-            <p>{p.description}</p>
-          </div>
-        ))}
-      </section>
+      <article className="space-y-10">
+        <header className="space-y-4">
+          <h1 className="text-4xl font-bold">Partnerships</h1>
+        </header>
+
+        <section className="space-y-6">
+          {program.partnerships.map((p, idx) => (
+            <div key={idx}>
+              <h2 className="text-2xl font-semibold">{p.name}</h2>
+              <p className="text-gray-700">{p.description}</p>
+            </div>
+          ))}
+        </section>
+      </article>
     </Layout>
   );
 }
