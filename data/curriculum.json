@@ -28,3 +28,45 @@
     "Community lectures"
   ]
 }
+{
+  "year1": {
+    "session1": [
+      "Identification of research area of interest",
+      "Coursework at UCLA Fielding School of Public Health / National Clinician Scholars Program: Health Policy and Financing, Research Design, Community-Based Participatory Research",
+      "Seminars at UCLA National Clinician Scholars Program: Pressing Health Issues, Pathways to Leadership, Journal Clubs"
+    ],
+    "session2": [
+      "Clinical rotations at Rand Schrader Clinic",
+      "LAC+USC Medical Center Emergency Department",
+      "Early Intervention Clinic (EIC) Skid Row",
+      "Maternal Child Adolescent (MCA) HIV Clinic",
+      "LAC+USC Medical Center Jail Clinic",
+      "USC Family Medicine Street Medicine Clinic",
+      "LAC+USC Inpatient ID Service (co-fellow on ID Service)",
+      "DHS South LA Positive Care Clinics (Main Street, Oasis)",
+      "HIV Sub-specialty Clinics at LAC+USC, CHLA, HRA"
+    ]
+  },
+  "year2": {
+    "clinical": [
+      "Independent decision-making rotations and precepting juniors on USC ID Consult Service"
+    ],
+    "scholarship": [
+      "Complete scholarly project with mentorship and prepare for presentations or publication",
+      "Weekly seminar series and journal clubs: Pressing Health Issues, Pathways to Leadership"
+    ]
+  },
+  "didactics": [
+    "Antiretroviral therapy",
+    "Department of Health and Human Services (DHHS) guidelines",
+    "HIV Core Curriculum (AAHIVM, UW)",
+    "Resistance training",
+    "Challenging cases and case conferences"
+  ],
+  "teaching": [
+    "Journal clubs",
+    "Resident preceptorship",
+    "Community lectures",
+    "Teaching primary care residents, medical students, and community health workers"
+  ]
+}

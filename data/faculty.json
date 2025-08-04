@@ -1,5 +1,3 @@
-
-
 [
   {
     "name": "Jenica Ryu, MD, AAHIVS",
@@ -43,47 +41,47 @@
   },
   {
     "name": "Eddie Sattah, MD",
-    "role": "Internal Medicine/Infectious Disease",
+    "role": "Internal Medicine/ Infectious Disease",
     "image": "/images/who-we-are/faculty/eddie-sattah.jpg"
   },
   {
-    "name": "Jessica Schneider, MD, AAHIVS",
-    "role": "Medicine-Pediatrics/HIV Primary Care/Correctional Health",
+    "name": "Jessica Schneider, MD AAHIVS",
+    "role": "Medicine-Pediatrics/ HIV Primary Care/ Correctional Health",
     "image": "/images/who-we-are/faculty/jessica-schneider.jpg"
   },
   {
     "name": "Gigi Simmons, MD",
-    "role": "Family Medicine/Addiction Medicine",
+    "role": "Family Medicine/ Addiction Medicine",
     "image": "/images/who-we-are/faculty/gigi-simmons.jpg"
   },
   {
     "name": "Hrishikesh Belani, MD, AAHIVS",
-    "role": "Internal Medicine/HIV/Addiction Medicine",
+    "role": "Internal Medicine/ HIV/ Addiction Medicine",
     "image": "/images/who-we-are/faculty/hrishikesh-belani.jpg"
   },
   {
     "name": "Katherine Gardner, MD",
-    "role": "Family Medicine/Gender Affirming Care",
+    "role": "Family Medicine/ Gender Affirming Care",
     "image": "/images/who-we-are/faculty/katherine-gardner.jpg"
   },
   {
     "name": "Kevin Tangonan, DO, AAHIVS",
-    "role": "Family Medicine/HIV Primary Care",
+    "role": "Family Medicine/ HIV Primary Care",
     "image": "/images/who-we-are/faculty/kevin-tangonan.jpg"
   },
   {
     "name": "Becca Cohen, MD, MPH, AAHIVS",
-    "role": "Family Medicine/HIV Primary Care",
+    "role": "Family Medicine/ HIV Primary Care",
     "image": "/images/who-we-are/faculty/becca-cohen.jpg"
   },
   {
     "name": "Katya Corado, MD",
-    "role": "Infectious Disease/HIV Primary Care",
+    "role": "Infectious Disease/ HIV Primary Care",
     "image": "/images/who-we-are/faculty/katya-corado.jpg"
   },
   {
     "name": "Johan Clarke, MD, AAHIVS",
-    "role": "HIV Primary Care/Gender Affirming Care/Addiction Medicine",
+    "role": "HIV Primary Care/ Gender Affirming Care/ Addiction Medicine",
     "image": "/images/who-we-are/faculty/johan-clarke.jpg"
   }
 ]
