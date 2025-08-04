@@ -6,6 +6,9 @@ import about from '../data/about.json';
 export default function HomePage() {
   return (
     <Layout>
+      <div className="bg-red-500 text-white p-4 mb-4">
+        If you see a red box, Tailwind is working.
+      </div>
       <section className="px-8 py-12">
         <h1 className="text-4xl font-bold mb-6">{about.title}</h1>
         <p className="mb-4">{about.purpose}</p>

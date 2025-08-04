@@ -2,18 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Theme variables */
-:root {
-  --background: #ffffff;
-  --foreground: #1f2937;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Global resets */
+/* custom overrides… */
+:root { --background: #ffffff; --foreground: #1f2937; }
+html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   background: var(--background);
