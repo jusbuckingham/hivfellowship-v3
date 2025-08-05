@@ -1,40 +1,26 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="bg-purple-700 text-white">
-      <div className="container mx-auto px-8 py-6">
-        <nav>
-          <ul className="flex space-x-8 list-none pl-0 m-0">
-            <li>
-              <Link href="/" className="uppercase hover:underline">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/curriculum" className="uppercase hover:underline">
-                Curriculum
-              </Link>
-            </li>
-            <li>
-              <Link href="/program" className="uppercase hover:underline">
-                Program
-              </Link>
-            </li>
-            <li>
-              <Link href="/who-we-are" className="uppercase hover:underline">
-                Who We Are
-              </Link>
-            </li>
-            <li>
-              <Link href="/apply" className="uppercase hover:underline">
-                Apply
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <header className="bg-purple-700 text-white shadow">
+      <nav className="container mx-auto px-8 py-4 flex space-x-8">
+        <Link href="/" className="uppercase font-medium hover:underline">
+          About
+        </Link>
+        <Link href="/curriculum" className="uppercase font-medium hover:underline">
+          Curriculum
+        </Link>
+        <Link href="/program" className="uppercase font-medium hover:underline">
+          Program
+        </Link>
+        <Link href="/who-we-are" className="uppercase font-medium hover:underline">
+          Who We Are
+        </Link>
+        <Link href="/apply" className="uppercase font-medium hover:underline">
+          Apply
+        </Link>
+      </nav>
     </header>
-  )
+  );
 }
