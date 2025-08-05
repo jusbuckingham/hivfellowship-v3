@@ -1,12 +1,57 @@
+// components/Footer.tsx
+
 import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="bg-purple-700 text-white">
-      <div className="container mx-auto px-8 py-6 text-center">
-        <p className="text-sm">
-          <small>&copy; {new Date().getFullYear()} HIV Clinical Fellowship. All rights reserved.</small>
-        </p>
+    <footer className="footer">
+      {/* Full-width banner image */}
+      <div className="footer-banner">
+        <img
+          src="/images/footer-banner.jpg"
+          alt="Los Angeles skyline"
+          className="footer-banner-img"
+        />
+      </div>
+
+      {/* Logo strip */}
+      <div className="footer-logos">
+        <img
+          src="/images/logos/health-services-lacounty.png"
+          alt="Health Services Los Angeles County"
+          className="footer-logo"
+        />
+        <img
+          src="/images/logos/keck-usc.png"
+          alt="Keck School of Medicine of USC"
+          className="footer-logo"
+        />
+        <img
+          src="/images/logos/cdu.png"
+          alt="Charles R. Drew University"
+          className="footer-logo"
+        />
+        <img
+          src="/images/logos/ucla-ncsp.png"
+          alt="UCLA National Clinician Scholars Program"
+          className="footer-logo"
+        />
+        <img
+          src="/images/logos/lundquist.png"
+          alt="The Lundquist Institute"
+          className="footer-logo"
+        />
+        <img
+          src="/images/logos/viiv.png"
+          alt="ViiV Healthcare"
+          className="footer-logo"
+        />
+      </div>
+
+      {/* Bottom copyright text */}
+      <div className="footer-text">
+        <p>© {new Date().getFullYear()} HIV Clinical Fellowship</p>
+        <p>Content in this website is property of the HIV Clinical Fellowship. Your Privacy Choices.</p>
       </div>
     </footer>
   );
