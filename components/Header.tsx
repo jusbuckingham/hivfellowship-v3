@@ -8,7 +8,7 @@ export default function Header() {
     <header className="site-header">
       <div className="header-container">
         <img
-          src="/images/logo.png"
+          src="/images/about/hiv-fellowship-logo-2.png"
           alt="HIV Clinical Fellowship Logo"
           className="header-logo"
         />
