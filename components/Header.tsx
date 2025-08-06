@@ -1,5 +1,3 @@
-// components/Header.tsx
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,7 +14,7 @@ export default function Header() {
           height={60}
           priority
         />
-        <nav className="header-nav">
+        <nav className="header-nav" aria-label="Main navigation">
           <Link href="/">About</Link>
           <Link href="/program">Program</Link>
           <Link href="/curriculum">Curriculum</Link>

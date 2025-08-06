@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* Custom overrides */
 :root {
   --background: #ffffff;
@@ -196,5 +197,48 @@ body {
   .header-nav a {
     margin: 0.5rem 0;
     font-size: 1rem;
+  }
+
+  /* General page padding */
+  body {
+    padding: 0 1rem;
+  }
+
+  /* Header container padding */
+  .header-container {
+    padding: 0.75rem 1rem;
+  }
+
+  /* Section headings */
+  .purple-heading {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Application form adjustments */
+  .application-form {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+  .application-form h2 {
+    font-size: 1.5rem;
+  }
+  .application-form input,
+  .application-form textarea {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Contact card */
+  .footer-text,
+  .footer-logos {
+    padding: 1rem;
+  }
+
+  /* Footer banner */
+  .footer-banner {
+    margin-left: 0;
+    width: 100%;
   }
 }
