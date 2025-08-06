@@ -1,16 +1,20 @@
 // components/Header.tsx
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header() {
   return (
     <header className="site-header">
       <div className="header-container">
-        <img
+        <Image
           src="/images/header/logo-ss.png"
           alt="HIV Clinical Fellowship Logo"
           className="header-logo"
+          width={200}
+          height={60}
+          priority
         />
         <nav className="header-nav">
           <Link href="/">About</Link>
