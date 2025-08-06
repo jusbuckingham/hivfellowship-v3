@@ -67,7 +67,7 @@ export default function Footer() {
       {/* Bottom copyright text */}
       <div className="footer-text">
         <p>© {new Date().getFullYear()} HIV Clinical Fellowship</p>
-        <p>Content in this website is property of the HIV Clinical Fellowship. Your Privacy Choices.</p>
+        <p>Content in this website is property of the HIV Clinical Fellowship.</p>
       </div>
     </footer>
   );
