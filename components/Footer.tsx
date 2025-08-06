@@ -8,7 +8,7 @@ export default function Footer() {
       {/* Full-width banner image */}
       <div className="footer-banner">
         <img
-          src="/images/footer/los-angeles-with-mount-baldy-credit-alek-leckszas_orig.jpeg"
+          src="/images/footer/footer-banner-ss.png"
           alt="Los Angeles skyline"
           className="footer-banner-img"
         />

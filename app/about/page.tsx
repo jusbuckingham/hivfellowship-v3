@@ -9,7 +9,7 @@ export default function AboutPage() {
     <Layout>
       <div className="mb-8">
         <Image
-          src="/images/about/lac-usccourtyard.jpeg"
+          src="/images/about/about-sc.png"
           alt="HIV Clinical Fellowship banner"
           width={1200}
           height={300}
