@@ -19,11 +19,11 @@ export default function ApplyPage() {
               className="w-1/2 h-auto"
             />
           </div>
-          {apply.intro.map((line, idx) => (
-            <p key={idx} className="text-lg text-gray-700 text-center">
-              {line}
+          <div className="max-w-3xl mx-auto">
+            <p className="text-lg text-gray-700">
+              {apply.intro.join(' ')}
             </p>
-          ))}
+          </div>
         </header>
 
         <section>
