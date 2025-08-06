@@ -1,6 +1,6 @@
 # HIV Clinical Fellowship v3
 
-A modern, JSON-driven website for the HIV Clinical Fellowship program, built with Next.js (App Router), React, TypeScript, and Tailwind CSS. Content is fully managed through structured JSON files, making updates fast and code-free.
+A modern, JSON-driven website for the HIV Clinical Fellowship program, built with Next.js (App Router), React, TypeScript, and custom CSS. Content is fully managed through structured JSON files, making updates fast and code-free.
 
 ## Tech Stack
 
@@ -18,35 +18,43 @@ A modern, JSON-driven website for the HIV Clinical Fellowship program, built wit
 hivfellowship-v3/
 ├── app/                         # Next.js App Router pages
 │   ├── layout.tsx               # Root layout (Header & Footer)
-│   ├── page.tsx                 # Home / About section
-│   ├── about/page.tsx           # About details
+│   ├── page.tsx                 # Home/About page
+│   ├── about/
+│   │   └── page.tsx             # About details
 │   ├── program/
 │   │   ├── page.tsx             # Program overview
-│   │   ├── partnerships/page.tsx
-│   │   └── benefits/page.tsx
-│   ├── curriculum/page.tsx      # Curriculum page
+│   │   ├── partnerships/
+│   │   │   └── page.tsx
+│   │   └── benefits/
+│   │       └── page.tsx
+│   ├── curriculum/
+│   │   └── page.tsx             # Curriculum page
 │   ├── who-we-are/
 │   │   ├── page.tsx             # Who We Are overview
-│   │   ├── faculty/page.tsx
-│   │   └── fellows/page.tsx
-│   └── apply/page.tsx           # Apply page
+│   │   ├── faculty/
+│   │   │   └── page.tsx
+│   │   └── fellows/
+│   │       └── page.tsx
+│   └── apply/
+│       └── page.tsx             # Apply page
 ├── components/                  # Shared components
 │   ├── Header.tsx
 │   ├── Footer.tsx
 │   └── Layout.tsx
 ├── data/                        # JSON content files
 │   ├── about.json
-│   ├── program.json
+│   ├── partnerships.json
+│   ├── overview-benefits.json
 │   ├── curriculum.json
 │   ├── faculty.json
 │   ├── fellows.json
 │   └── apply.json
 ├── public/                      # Static assets (images, etc.)
 │   └── images/
-├── styles/                     
+├── styles/
 │   └── globals.css              # Tailwind directives & custom CSS
-├── tailwind.config.js           # Tailwind configuration
-├── postcss.config.js            # PostCSS configuration
+├── tailwind.config.cjs          # Tailwind configuration
+├── postcss.config.cjs           # PostCSS configuration
 ├── tsconfig.json                # TypeScript configuration
 ├── next.config.js               # Next.js configuration
 └── package.json                 # Dependencies & scripts
@@ -91,9 +99,8 @@ import Image from 'next/image';
 ## Deployment
 
 Seamless deployment on Vercel:
-
-1. Push your repo to GitHub.
-2. Import into Vercel—auto-deploys on every push to `main`.
+1. Commit and push your changes to GitHub.
+2. Vercel will auto-deploy your `main` branch to production.
 
 ## Contributing
 
