@@ -1,42 +1,97 @@
 {
   "year1": {
-    "session1": [
-      "Identification of research area of interest",
-      "Coursework at UCLA Fielding School of Public Health / National Clinician Scholars Program: Health Policy and Financing, Research Design, Community-Based Participatory Research",
-      "Seminars at UCLA National Clinician Scholars Program: Pressing Health Issues, Pathways to Leadership, Journal Clubs"
-    ],
-    "session2": [
-      "Clinical rotations at Rand Schrader Clinic",
-      "LAC+USC Medical Center Emergency Department",
-      "Early Intervention Clinic (EIC) Skid Row",
-      "Maternal Child Adolescent (MCA) HIV Clinic",
-      "LAC+USC Medical Center Jail Clinic",
-      "USC Family Medicine Street Medicine Clinic",
-      "LAC+USC Inpatient ID Service (co-fellow on ID Service)",
-      "DHS South LA Positive Care Clinics (Main Street, Oasis)",
-      "HIV Sub-specialty Clinics at LAC+USC, CHLA, HRA"
-    ]
+    "session1": {
+      "duration": "6 months",
+      "scholarshipLeadershipDevelopment": [
+        "Identification of research area of interest",
+        "Coursework at UCLA Fielding School of Public Health/ National Clinician Scholars Program: Health Policy and Financing, Research Design, Community-Based Participatory Research",
+        "Seminars at UCLA National Clinician Scholars Program: Pressing Health Issues, Pathways to Leadership, Journal Clubs."
+      ],
+      "clinicalTrainingCare": [
+        "HIV Primary Care settings: Rand Schrader Clinic, LAC+USC Medical Center, Early Intervention Clinic (EIC) Skid Row, Emergency Department, LAC Jail Clinic, HIV Sub-specialty clinics at LAC+USC Medical Center."
+      ],
+      "didacticsAndCaseStudies": [
+        "Antiretroviral therapy",
+        "Department of Health and Human Services (DHHS) guidelines",
+        "resistance training",
+        "challenging cases."
+      ]
+    },
+    "session2": {
+      "duration": "6 months",
+      "clinicalTrainingCare": [
+        "HIV clinical settings: Rand Schrader Clinic, LAC+USC Medical Center, EIC Skid Row, Material-Child Adolescent (MCA) HIV Clinic, LAC+USC Emergency Department, LAC USC Medical Center Jail Clinic, Street Medicine Clinic, LAC+USC Inpatient ID (functions as co-fellow on ID Service), DHS South LA Positive Care Clinics (Main Street, Oasis), HIV Sub-speciality Clinics (LAC+USC, CHLA, HRA, etc.)"
+      ],
+      "scholarshipLeadership": [
+        "Scholarly project planning (idea finalization, IRB application)",
+        "Seminars at UCLA National Clinician Scholars Program: Pressing Health Issues, Pathways to Leadership, ETC."
+      ],
+      "didacticsAndCaseStudies": [
+        "Antiretroviral therapy",
+        "DHHS guidelines",
+        "HIV Core Curriculum (AAHIVM, UW)",
+        "HIV resistance training",
+        "challenging cases",
+        "case conference"
+      ],
+      "journalClubsAndTeaching": [
+        "Teaching primary care residents in the USC HIV Training Program",
+        "Clinical teaching (residents, medical and other students) lectures/ presentations to residents, medical students, advanced practice providers, nurses and community healthcare workers, etc."
+      ]
+    }
   },
   "year2": {
-    "clinical": [
-      "Independent decision-making rotations and precepting juniors on USC ID Consult Service"
+    "clinicalTrainingCare": [
+      "HIV Training Settings at Rand Schrader Clinic, LAC+USC Medical Center Early Intervention Clinic (Skid Row), Material-Child HIV Clinic, LAC+USC Medical Center Emergency Department, LAC+USC Medical Center, LAC Jail Clinic, USC Family Medicine, Street Medicine Clinic, Hubert H. Humphrey, Comprehensive Health Center, LA Department of Public Health Clinics - HIV Sub-specialty Clinics (LAC+USC Medical Center).",
+      "Clinical teaching of residents, medical and other students",
+      "General Primary Care (as desired and available) DHS clinic or other site where fellow will provide full service primary care to a panel of adult and pediatric patients."
     ],
-    "scholarship": [
-      "Complete scholarly project with mentorship and prepare for presentations or publication",
-      "Weekly seminar series and journal clubs: Pressing Health Issues, Pathways to Leadership"
+    "scholarshipLeadershipDevelopment": [
+      "Work closely with research mentor(s) to complete project and prepare for conference presentation and/ or publication",
+      "Seminars at UCLA National Clinician Scholars Program: Pressing Health Issues, Pathways to Leadership, Journal Clubs."
+    ],
+    "scholarshipAndResearch": [
+      "All fellows are required to participate in a scholarly project that will be completed by the end of their second year of fellowship. Fellows may develop an independent project or may participate in ongoing research projects supported by faculty at USC, AETC, UCLA, and/or DHS. Fellows are expected to pursue research or quality improvement projects in their particular areas of interest. Faculty will meet with fellows at the start of Year 1 to identify areas of interest and potential project ideas; mentorship by faculty will be provided throughout the fellowship.",
+      "Coursework at UCLA has been specifically selected to instill an early understanding of the fundamentals of health research, health policy, social determinants of health, inequities in healthcare and health outcomes. Fellows will not be enrolled as full- or part-time students at UCLA, but will instead audit the designated courses. Fellows will be expected to participate in a minimum of 3 classes: Health Policy and Financing, Research Design, and Community-Based Participatory Research. Fellows are also expected to participate in weekly journal clubs and seminars entitled Pressing Health Issues and Pathways to Leadership.",
+      "After completing the selected courses, fellows should be able to develop a proposal for their scholarly project and begin planning the steps to initiating and completing the project. Fellows will have dedicated time each week (with no assigned clinical duties or didactic sessions) to work on their projects. Fellows are encouraged to demonstrate acquired knowledge, skills, and scholarly results through presentation at professional meetings or publication in scientific/academic journals. Faculty and research staff support will be available to provide mentorship and support."
     ]
   },
-  "didactics": [
-    "Antiretroviral therapy",
-    "Department of Health and Human Services (DHHS) guidelines",
-    "HIV Core Curriculum (AAHIVM, UW)",
-    "Resistance training",
-    "Challenging cases and case conferences"
-  ],
-  "teaching": [
-    "Journal clubs",
-    "Resident preceptorship",
-    "Community lectures",
-    "Teaching primary care residents, medical students, and community health workers"
+  "coreClinicalTrainingExperiences": {
+    "hivPrimaryCare": [
+      "Rand Schrader Health and Research Center (5p21)",
+      "Early Intervention Clinic (EIC) at the JWCH Center for Community Health",
+      "Maternal Child Adult and Adolescent Virology Clinic (MCA)",
+      "Hubert H. Humphrey Comprehensive Health Center (HHH)",
+      "AIDS Project Los Angeles (APLA) Health",
+      "USC Family Medicine Street Medicine Clinic",
+      "HIV line at the Los Angeles County Jail (LAC)"
+    ],
+    "emergencyDepartmentHIVConsultation": "Fellows provide 24/7 Emergency Room consultations and bedside education to emergency department providers at LAC+USC Medical Center. This includes consultations for patients with newly diagnosed HIV infections, acute HIV infections, or chronic HIV infections, regardless of whether the patients have an established medical home.",
+    "hivSubspecialtyCare": {
+      "description": "HIV Sub-Speciality care training will occur predominately at 5p21, but fellows also rotate at Maternal Child and Adolescent Clinic, Children’s Hospital Los Angeles and Owen’s Clinic of UC San Diego. Fellows receive training in the key HIV sub-specialities:",
+      "specialities": [
+        "Addiction medicine",
+        "Adolescent medicine",
+        "Communicable",
+        "Neurology",
+        "Diseases/ Infectious Diseases",
+        "Colorectal Dermatology",
+        "Hematology/ Oncology",
+        "Hepatitis C Co-Infection",
+        "High Resolution Anoscopy (HRA)",
+        "Palliative care",
+        "Pediatric immunology",
+        "Psychiatry",
+        "Pulmonary medicine"
+      ]
+    },
+    "inpatientCare": "Management training of hospitalized HIV-positive patients will occur at the LAC+USC Medical Center. Fellows rotate on the USC Infectious Disease (ID) Consult Service for a minimum of one month. They function as a co-fellow alongside the ID fellow to oversee the consult service and attend/ participate in ID conferences. They assist in the care of HIV-positive and negative patients with ID pathology. Conditions seen on this service include, but are not limited to: acute HIV, opportunistic infections, opportunistic malignancies and AIDS defining infections/ conditions."
+  },
+  "teachingTrainingOpportunities": [
+    "Development of advanced teaching/training skills in fellows is a key goal of our programs. Fellows are expected to participate in and develop trainings for varied learners from patients to medical students and health professionals of different levels. Fellows will develop a minimum of one original, interactive HIV or HIV-related presentation for providers.",
+    "Clinical Training Program (CTP): The CTP is a hands-on, intensive 1-2 week clinical preceptorship offered year round to resident and community physicians, physician assistants and nurse practitioners wishing to gain experience in HIV management. Trainees participate in a four-hour HIV Orientation workshop, see patients under supervision of a specialist and expand knowledge/skills via additional educational tools, such as interactive opportunistic infection cases, standardized patients and expanded disclosure cases. HIV fellows play a key role as trainer in the CTP program. They provide education to CTP participants in the following roles: HIV Orientation workshop: conduct this session a minimum of three times during the year; Opportunistic Infection Cases: conduct small group Opportunistic Infection cases most weeks of the year; Standardized Patients: provide feedback to participants on their skill with two interactive cases focused on assessing HIV risk factors and providing HIV pre-exposure prophylaxis counseling; Clinical preceptorship: provide targeted teaching during patient care. As their own skills expand, fellows will function as a preceptor receiving patient presentations from trainees and providing guidance on management to participants during clinic.",
+    "Emergency Department Testing & Linkage to Care: Fellows play a critical teaching role in the HIV Testing, Linkage and Treatment program in the LAC + USC Emergency Department. As first responders on-call, they engage with emergency department providers for all new HIV-positive diagnoses and for those patients who are known-positive and out of care. Fellows provide teaching to patients, emergency room staff, residents and faculty on a wide breadth of topics including: HIV basics (transmission, sign/symptoms), current HIV testing algorithms, opportunistic infection diagnosis/prevention/treatment, ART initiation and management, and strategies to reduce barriers to care and improve linkage-to-care.",
+    "Los Angeles County Jail: The HIV fellow role has become established as a key teaching resource in the jail. Fellows and USC faculty work closely with jail Infection Control (HIV Nurse Liaison, Epidemiologist) and the jail Medical Services Bureau. Fellows will be asked to assist in developing trainings and workshops as needs arise throughout the year. Regular teaching opportunities include: Jail New Hire HIV Orientation (every odd month – 1st Wed 1-2:30), HIV/Hepatitis C Updates & In-services to jail providers (MD/NP), nurses, administration, custody (2-3/year).",
+    "Fellows will present lectures on HIV medicine topics to trainee groups at local teaching facilities, such as White Memorial Medical Center Family & Internal Medicine lecture series, USC School of Dentistry, USC Physician Assistant Program, USC AETC Projects."
   ]
 }

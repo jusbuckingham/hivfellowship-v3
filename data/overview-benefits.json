@@ -1,0 +1,18 @@
+{
+  "salaryAndBenefitsIntro": "Postgraduate physician salaries and benefits are established periodically by the County of Los Angeles Board of Supervisors, by way of County ordinance and/ or through an applicable Memorandum of Understanding with the Joint Council of Inters and Residents (JCIR).",
+  "annualGrossSalary": {
+    "period": "2025 - 2026",
+    "entries": [
+      { "position": "Physician Post Graduate Year 4 (PGY -4)", "amount": "$84, 123.48" },
+      { "position": "Physician Post Graduate Year 5 (PGY -5)", "amount": "$90,019.06" },
+      { "position": "Physician Post Graduate Year 6 (PGY -6)", "amount": "$96,118.29" },
+      { "position": "Physician Post Graduate Year 7 (PGY -7)", "amount": "$101,181.64" }
+    ]
+  },
+  "medicalAndDentalBenefits": "Benefit packages available to all employees of Lundquist Institute will be offered to all fellows and paid for by the fellowship program. Fellows may opt-out of the coverage, by will not receive monetary reimbursement for any declined benefits. Dependents of fellows may also receive medical and dental benefits through available benefit packages that are covered by the fellowship program.",
+  "housingStipend": "A housing stipend of $10,000 per year is provided to all acitve fellows in August of each academic year as of July 1, 2023.",
+  "educationalStipend": "Conference fees, airfare, lodging and per diem reimbursements are available for up to two (2) relevant continuing medical education conferences and/ or activities per year.",
+  "relocation": "There are no additional relocation benefits provided. Fellows are responsible for any incurred moving expenses and for all required professional licensure expenses (California medical license, board certification, CPR certification, CME coursework).",
+  "licensureFees": "Fellows may apply for DEA license fee exemption for services provided in Los Angeles County Department of Health Services facilities. AAHIVM HIV Specialist examination fees and study materials are reimbursed.",
+  "leaveTime": "Each fellow is allotted 25 paid leave days per year; these may be used for vacation sick or personal time off."
+}

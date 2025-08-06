@@ -1,0 +1,44 @@
+
+
+{
+  "partnerships": [
+    {
+      "name": "Los Angeles County Department of Health Services",
+      "description": "Los Angeles County Department of Health Services is the second-largest county health system in the US. DHS provides integrated patient-centered care to over 670,000 residents annually through its network of 19 health centers, 3 hospitals and community partner clinics. DHS serves diverse populations, including justice-involved youth, older adults and individuals in foster care, and is a key part of the LA County Health Agency alongside the Departments of Public Health and Mental Health. With academic partnerships at USC and UCLA, DHS is also a major hub for post-graduate medical training in California."
+    },
+    {
+      "name": "The Lundquist Institute for Biomedical Innovation",
+      "description": "The Lundquist Institute for Biomedical Innovation is a nonprofit research organization based in Harbor-UCLA Medical Center. It supports groundbreaking clinical and translational research across a wide range of health areas. As the fiscal sponsor of the LA County HIV Clinical Fellowship, the Institute provides financial and administrative oversight, while DHS leads the program’s clinical and educational activities."
+    },
+    {
+      "name": "ViiV Healthcare",
+      "description": "ViiV Healthcare is a global HIV specialist company dedicated to advancing treatment, prevention and health equity. While ViiV provides financial support for the LA County HIV Clinical Fellowship, it has no role in the program’s curriculum, clinical operations or fellow selection. All aspects of the program are independently managed by DHS and its academic partners."
+    }
+  ],
+  "coreCollaborators": [
+    {
+      "name": "USC Keck School of Medicine, Department of Family Medicine",
+      "description": "The USC Keck School of Medicine, Department of Family Medicine, a leader in holistic, patient-centered care, emphasizes medical excellence and social justice. It was the founding site of one of the first AIDS Education and Training Centers (AETCs) in the U.S. and remains a strategic partner in the LA County HIV Clinical Fellowship, contributing to workforce development and HIV primary care training."
+    },
+    {
+      "name": "Pacific AIDS Education and Training Center (PAETC)",
+      "description": "The Pacific AIDS Education and Training Center (PAETC) was founded in Los Angeles in 1988. PAETC works to increase the number and capacity of healthcare providers delivering high-quality HIV care, especially in underserved communities. Through multidisciplinary training for clinicians, including MDs, NPs, PAs, and pharmacists, PAETC supports providers serving high-prevalence, marginalized populations such as those who are unhoused or incarcerated. The regional office, based at UCSF, oversees eight local partner sites across the Pacific region, supporting a network of over 300 Ryan White clinics and 219 FQHCs at nearly 2,000 sites."
+    },
+    {
+      "name": "UCLA National Clinician Scholars Program (NCSP)",
+      "description": "The UCLA National Clinician Scholars Program (NCSP) is committed to solving the most pressing societal challenges of our time, addressing disparities and quality of care in an ever-changing healthcare landscape. This postdoctoral program prepares early-career physicians and nurses for leadership in healthcare. LA County HIV Clinical Fellows complete a customized version of the curriculum during their first six months, gaining skills in health policy, community-based research, and leadership."
+    },
+    {
+      "name": "Maternal Child Adolescent Center for Infectious Diseases and Virology (MCA)",
+      "description": "The Maternal Child Adolescent Center for Infectious Diseases and Virology (MCA), founded in 1988 during the height of the pediatric HIV epidemic, is California’s largest multidisciplinary Family HIV Center. The center provides comprehensive, culturally responsive care to women, children, youth, and families affected by HIV, particularly from communities of color and underserved populations. Now located at the Rand Schrader Clinic at LA General Medical Center, the MCA Center is part of Los Angeles County DHS and remains a vital training site for fellows, offering hands-on experience in perinatal and family-based HIV care."
+    },
+    {
+      "name": "Charles R. Drew University of Medicine and Science & Drew CARES (CDU)",
+      "description": "Charles R. Drew University of Medicine and Science & Drew CARES (CDU) is a community-founded, private nonprofit university and one of only four Historically Black Medical Colleges, as well as a Hispanic-serving institution. With a mission rooted in social justice and health equity, CDU prepares diverse health leaders to serve underserved populations. Its HIV-focused arm, Drew CARES—a partnership with the Los Angeles County Department of Health Services—advances HIV prevention, treatment, research, and training through community-driven initiatives. Drew CARES also serves as a key clinical and educational site for fellows, students, and residents."
+    },
+    {
+      "name": "Center for HIV Identification, Prevention, and Treatment Services (CHIPTS)",
+      "description": "The Center for HIV Identification, Prevention, and Treatment Services (CHIPTS) is a multi-institution collaboration involving UCLA, Charles R. Drew University, Friends Research Institute, and the RAND Corporation. Funded by the National Institute of Mental Health, CHIPTS supports research, innovation, and capacity building to reduce HIV-related health disparities both domestically and globally. With expertise in HIV prevention, care, policy, and training, CHIPTS faculty provide research and policy mentorship to fellows in the LA County HIV Clinical Fellowship."
+    }
+  ]
+}

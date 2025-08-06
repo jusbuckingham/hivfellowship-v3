@@ -8,7 +8,7 @@ export default function Footer() {
       {/* Full-width banner image */}
       <div className="footer-banner">
         <img
-          src="/images/footer-banner.jpg"
+          src="/images/footer/los-angeles-with-mount-baldy-credit-alek-leckszas_orig.jpeg"
           alt="Los Angeles skyline"
           className="footer-banner-img"
         />
@@ -17,12 +17,12 @@ export default function Footer() {
       {/* Logo strip */}
       <div className="footer-logos">
         <img
-          src="/images/logos/health-services-lacounty.png"
+          src="/images/program/partnerships/health-services-lac.png"
           alt="Health Services Los Angeles County"
           className="footer-logo"
         />
         <img
-          src="/images/logos/keck-usc.png"
+          src="/images/program/partnerships/kecklogo.jpeg"
           alt="Keck School of Medicine of USC"
           className="footer-logo"
         />
@@ -32,17 +32,17 @@ export default function Footer() {
           className="footer-logo"
         />
         <img
-          src="/images/logos/ucla-ncsp.png"
+          src="/images/program/partnerships/ucla-ncsp.png"
           alt="UCLA National Clinician Scholars Program"
           className="footer-logo"
         />
         <img
-          src="/images/logos/lundquist.png"
+          src="/images/program/partnerships/lundquist.png"
           alt="The Lundquist Institute"
           className="footer-logo"
         />
         <img
-          src="/images/logos/viiv.png"
+          src="/images/program/partnerships/viivlogo.png"
           alt="ViiV Healthcare"
           className="footer-logo"
         />

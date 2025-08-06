@@ -61,3 +61,47 @@ body {
   margin: 0.25rem 0;
   font-size: 0.875rem;
 }
+
+/* Footer banner */
+.footer-banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-banner-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Footer logos */
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+}
+
+.footer-logo {
+  max-height: 60px;
+  width: auto;
+}
+
+/* Accessibility & responsive nav */
+.header-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header-nav a:focus-visible {
+  outline: 2px dashed #ffffff;
+  outline-offset: 4px;
+}
+
+/* Ensure footer logos are responsive */
+.footer-logos {
+  flex-wrap: wrap;
+}

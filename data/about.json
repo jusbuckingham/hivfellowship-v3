@@ -1,15 +1,22 @@
 {
   "title": "Welcome to the HIV Clinical Fellowship",
   "purpose": "As the HIV epidemic and workforce changes in the United States, there is an evolving need for physicians trained in the full-scope of HIV care, who can serve complex populations and become leaders in the field of HIV medicine.",
+  "program": {
+    "description": "The HIV Clinical Fellowship is a two-year postdoctoral fellowship that trains primary care physicians in advanced HIV care and related fields, promotes scholarship and academic teaching skills of participating fellows.",
+    "qualifiedPhysicians": [
+      "Committed to providing comprehensive HIV care and prevention, notably for patients from highly impacted and vulnerable communities",
+      "Dedicated to becoming leaders in healthcare, medical education, and patient advocacy",
+      "Interested in learning about health care systems, research and policy"
+    ]
+  },
   "established": 2001,
+  "history": [
+    "Established in 2001, the HIV Clinical Fellowship (HCF) is one of the first fellowship programs in the United States dedicated to HIV care. Based at a well-recognized clinic in the Los Angeles area, the program was developed by the Los Angeles Area AIDS Education and Training Center (AETC) at the Keck School of Medicine of USC, within the Department of Family Medicine. Since its inception, the program has continually evolved to address the changing needs of both patients and healthcare systems.",
+    "In 2016, the program expanded through a strategic partnership with the Los Angeles County Department of Health Services (DHS)—the second-largest municipal safety-net health system in the nation—further increasing its capacity and influence."
+  ],
   "description": [
     "This unique, two-year fellowship is designed for physicians trained in Family Medicine, Internal Medicine, or Med-Peds who are dedicated to advancing high-quality HIV primary and specialty care for underserved and vulnerable populations, including individuals experiencing homelessness, substance use disorders, incarceration, and those who are underinsured.",
     "To date, the CLP has graduated over 30 fellows, many of whom now serve in diverse clinical and leadership roles across community health centers, academic medical institutions, and public health agencies."
-  ],
-  "highlights": [
-    "Committed to providing comprehensive HIV care and prevention, notably for patients from highly impacted and vulnerable communities",
-    "Dedicated to becoming leaders in healthcare, medical education, and patient advocacy",
-    "Interested in learning about health care systems, research and policy"
   ],
   "coreTraining": [
     "HIV Primary Care",
