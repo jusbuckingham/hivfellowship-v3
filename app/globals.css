@@ -179,45 +179,37 @@ body {
 /* Responsive header for mobile */
 @media (max-width: 640px) {
   .header-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding: 1rem;
-  }
-
-  .header-logo {
-    margin-bottom: 0.5rem;
-  }
-
-  .header-nav ul {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0.5rem;
-  }
-
-  .header-nav a {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-  }
-
-  /* General page padding */
-  body {
-    padding: 0 1rem;
-  }
-
-  /* Header container padding */
-  .header-container {
+    justify-content: space-between;
     padding: 0.75rem 1rem;
   }
 
-  /* Section headings */
-  .purple-heading {
-    font-size: 1.25rem;
-    padding: 0.5rem 1rem;
-    margin-top: 1.5rem;
+  .header-logo {
+    margin: 0 0 0.5rem 0;
   }
 
-  /* Application form adjustments */
+  .header-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+  .header-nav a {
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  main, .application-form, article {
+    padding: 0 1rem;
+  }
+
   .application-form {
+    width: 100%;
     margin: 1rem auto;
     padding: 1rem;
   }
