@@ -230,6 +230,8 @@ body {
 
   /* Footer banner */
   .footer-banner {
+    position: static;
+    left: auto;
     margin-left: 0;
     width: 100%;
   }
