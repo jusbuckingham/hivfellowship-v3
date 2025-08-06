@@ -7,7 +7,7 @@ import about from '../../data/about.json';
 export default function AboutPage() {
   return (
     <Layout>
-      <div className="mb-8">
+      <div className="mb-8 px-4 sm:px-6 md:px-8">
         <Image
           src="/images/about/about-sc.png"
           alt="HIV Clinical Fellowship banner"
@@ -17,16 +17,16 @@ export default function AboutPage() {
         />
       </div>
 
-      <article className="space-y-10">
+      <article className="space-y-10 px-4 sm:px-6 md:px-8">
         <header className="space-y-4">
-          <h1 className="text-4xl font-bold text-center">{about.title}</h1>
-          <p className="text-lg text-gray-700">{about.purpose}</p>
+          <h1 className="text-3xl sm:text-4xl font-bold text-center">{about.title}</h1>
+          <p className="text-lg sm:text-left text-center text-gray-700">{about.purpose}</p>
         </header>
 
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">Program</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold">Program</h2>
           <p className="text-gray-700">{about.program.description}</p>
-          <ol className="list-decimal pl-8 space-y-2">
+          <ol className="list-decimal pl-4 sm:pl-8 space-y-2">
             {about.program.qualifiedPhysicians.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
@@ -51,8 +51,8 @@ export default function AboutPage() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-4">Training Sites</h2>
-          <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4">Training Sites</h2>
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 sm:px-6 md:px-0">
             {about.trainingSites.map((site, idx) => (
               <li key={idx}>{site}</li>
             ))}
@@ -60,8 +60,8 @@ export default function AboutPage() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-4">Core Clinical Training</h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4">Core Clinical Training</h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 px-4 sm:px-6 md:px-0">
             {about.coreTraining.map((training, idx) => (
               <li key={idx}>{training}</li>
             ))}

@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 export const metadata = {
   title: 'HIV Clinical Fellowship',
   description: '…',
+  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -12,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="flex flex-col min-h-screen bg-white">
         <Header />
-        <main className="flex-1">
+        <main className="flex-1 container mx-auto px-4 sm:px-6 md:px-8">
           {children}
         </main>
         <Footer />

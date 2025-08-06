@@ -27,8 +27,7 @@ body {
 }
 
 .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
@@ -47,7 +46,7 @@ body {
 }
 
 .header-logo {
-  width: 50px;
+  width: 200px;
   height: auto;
 }
 
@@ -85,6 +84,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  white-space: nowrap;
 }
 
 .header-nav a:focus-visible {
@@ -234,5 +234,24 @@ body {
     left: auto;
     margin-left: 0;
     width: 100%;
+  }
+
+  /* Override full-viewport headings on mobile */
+  .purple-heading {
+    margin-left: 0;
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Add horizontal padding to footer sections */
+  .footer-text,
+  .footer-logos {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Remove any global body padding on mobile */
+  body {
+    padding: 0;
   }
 }

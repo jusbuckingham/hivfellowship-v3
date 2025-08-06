@@ -8,7 +8,7 @@ import Image from 'next/image';
 export default function ApplyPage() {
   return (
     <Layout>
-      <article className="space-y-10 pb-12">
+      <article className="space-y-10 pb-12 px-4 sm:px-6 md:px-8">
         <header className="space-y-4 pt-8">
           <div className="flex justify-center mt-8 mb-8">
             <Image
@@ -27,12 +27,12 @@ export default function ApplyPage() {
         </header>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-3">Application Process</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold mb-3">Application Process</h2>
           <p className="text-gray-700">{apply.applicationProcess.note}</p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-3">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-3">
             We are seeking passionate, mission-driven physicians who:
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -43,7 +43,7 @@ export default function ApplyPage() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-3">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-3">
             {apply.boardEligibility.description}
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -55,8 +55,8 @@ export default function ApplyPage() {
 
         {/* Call to Apply */}
         <section>
-          <p className="text-lg text-gray-700 text-center mt-8">Apply today!</p>
-          <p className="text-lg text-gray-700 text-center">
+          <p className="text-lg text-gray-700 mt-8">Apply today!</p>
+          <p className="text-lg text-gray-700">
             Please{' '}
             <Link href="#" className="text-blue-600 hover:underline">
               click here to access the application form
@@ -65,7 +65,7 @@ export default function ApplyPage() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-3 text-center">Contact</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold mb-3">Contact</h2>
           <div className="bg-gray-50 p-6 rounded-md max-w-lg mx-auto text-center space-y-2 mb-6">
             <p className="text-gray-700">To request additional information, please contact:</p>
             <p className="text-xl font-bold">{apply.contact.name}</p>
@@ -82,8 +82,8 @@ export default function ApplyPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-3">Application Form</h2>
-          <form className="space-y-6 max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-3">Application Form</h2>
+          <form className="application-form space-y-6 max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
             {apply.form.fields.map((field, idx) => (
               <div key={idx}>
                 <label className="block text-sm font-medium text-gray-700 mb-2">{field}</label>

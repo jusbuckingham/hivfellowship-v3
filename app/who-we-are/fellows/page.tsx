@@ -9,7 +9,7 @@ export default function FellowsPage() {
 
   return (
     <Layout>
-      <article className="space-y-10">
+      <article className="space-y-10 px-4 md:px-8">
         <header className="space-y-4">
           <h1 className="text-4xl font-bold uppercase">CURRENT FELLOWS</h1>
         </header>

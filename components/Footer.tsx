@@ -19,7 +19,8 @@ export default function Footer() {
       </div>
 
       {/* Logo strip */}
-      <div className="footer-logos">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
+      <div className="footer-logos flex-wrap">
         <Image
           src="/images/program/partnerships/health-services-lac.png"
           alt="Health Services Los Angeles County"
@@ -65,9 +66,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom copyright text */}
-      <div className="footer-text">
+      <div className="footer-text text-center mt-6">
         <p>© {new Date().getFullYear()} HIV Clinical Fellowship</p>
         <p>Content in this website is property of the HIV Clinical Fellowship.</p>
+      </div>
       </div>
     </footer>
   );
