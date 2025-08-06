@@ -1,8 +1,12 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="site-header w-full bg-[#1F2377]">
       <div className="flex items-center justify-between w-full px-6 py-9 sm:px-8 sm:py-12 md:px-12 md:py-16">
@@ -15,11 +19,36 @@ export default function Header() {
           priority
         />
         <nav className="header-nav flex space-x-6" aria-label="Main navigation">
-          <Link href="/">About</Link>
-          <Link href="/program">Program</Link>
-          <Link href="/curriculum">Curriculum</Link>
-          <Link href="/who-we-are">Who We Are</Link>
-          <Link href="/apply">Apply</Link>
+          <Link
+            href="/"
+            className={`py-2 ${pathname === '/' ? 'font-bold underline' : ''}`}
+          >
+            About
+          </Link>
+          <Link
+            href="/program"
+            className={`py-2 ${pathname === '/program' ? 'font-bold underline' : ''}`}
+          >
+            Program
+          </Link>
+          <Link
+            href="/curriculum"
+            className={`py-2 ${pathname === '/curriculum' ? 'font-bold underline' : ''}`}
+          >
+            Curriculum
+          </Link>
+          <Link
+            href="/who-we-are"
+            className={`py-2 ${pathname === '/who-we-are' ? 'font-bold underline' : ''}`}
+          >
+            Who We Are
+          </Link>
+          <Link
+            href="/apply"
+            className={`py-2 ${pathname === '/apply' ? 'font-bold underline' : ''}`}
+          >
+            Apply
+          </Link>
         </nav>
       </div>
     </header>

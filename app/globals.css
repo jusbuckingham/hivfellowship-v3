@@ -32,6 +32,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-nav {
+  flex: 1;
+  overflow-x: auto;
 }
 
 .header-nav a {
@@ -46,7 +52,8 @@ body {
 }
 
 .header-logo {
-  width: 200px;
+  width: 250px;
+  flex-shrink: 0;
   height: auto;
 }
 
@@ -82,8 +89,11 @@ body {
 /* Accessibility & responsive nav */
 .header-nav ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
   white-space: nowrap;
 }
 
