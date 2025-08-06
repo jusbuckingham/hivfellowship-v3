@@ -1,43 +1,37 @@
 # HIV Clinical Fellowship v3
 
-A modern, JSON-driven website for the HIV Clinical Fellowship program, built with Next.js (App Router), React, TypeScript, and custom CSS. Content is fully managed through structured JSON files, making updates fast and code-free.
+A JSON-driven, content-managed website for the HIV Clinical Fellowship program. Built with Next.js (App Router), React, and TypeScript, the site uses structured JSON files for all page content and custom CSS for styling, making updates seamless and code-free.
 
-## Tech Stack
+## 🚀 Features
 
-- **Next.js** (App Router)
-- **React**
-- **TypeScript**
-- **Tailwind CSS** (utility-first styling)
-- **PostCSS** (with Tailwind integration)
-- **JSON** data files for content
-- **Vercel** for deployment
+- **App Router**: Leverages Next.js 15’s App Router for layouts, nested routing, and server components.
+- **JSON Content**: All page copy and data (about, program details, curriculum, faculty, fellows, apply) lives in `/data/*.json`.
+- **Responsive & Accessible**: Mobile-first design with semantic HTML, accessible navigation, and form controls.
+- **Custom CSS**: Tailwind CSS setup with PostCSS, plus additional global styles in `app/globals.css`.
+- **Vercel Deployment**: One-click deploys on Vercel with instant previews on each PR.
 
-## Project Structure
+## 🛠 Tech Stack
+
+- **Next.js** (App Router)  
+- **React**  
+- **TypeScript**  
+- **Tailwind CSS** & **PostCSS**  
+- **JSON** for content  
+- **Vercel** for hosting
+
+## 📁 Project Structure
 
 ```
 hivfellowship-v3/
 ├── app/                         # Next.js App Router pages
 │   ├── layout.tsx               # Root layout (Header & Footer)
-│   ├── page.tsx                 # Home/About page
-│   ├── about/
-│   │   └── page.tsx             # About details
-│   ├── program/
-│   │   ├── page.tsx             # Program overview
-│   │   ├── partnerships/
-│   │   │   └── page.tsx
-│   │   └── benefits/
-│   │       └── page.tsx
-│   ├── curriculum/
-│   │   └── page.tsx             # Curriculum page
-│   ├── who-we-are/
-│   │   ├── page.tsx             # Who We Are overview
-│   │   ├── faculty/
-│   │   │   └── page.tsx
-│   │   └── fellows/
-│   │       └── page.tsx
-│   └── apply/
-│       └── page.tsx             # Apply page
-├── components/                  # Shared components
+│   ├── page.tsx                 # Home/About landing
+│   ├── about/                   # About page
+│   ├── program/                 # Program overview, partnerships, benefits
+│   ├── curriculum/              # Curriculum page
+│   ├── who-we-are/              # Who We Are overview, faculty, fellows
+│   └── apply/                   # Apply page & form
+├── components/                  # Shared UI components
 │   ├── Header.tsx
 │   ├── Footer.tsx
 │   └── Layout.tsx
@@ -49,10 +43,8 @@ hivfellowship-v3/
 │   ├── faculty.json
 │   ├── fellows.json
 │   └── apply.json
-├── public/                      # Static assets (images, etc.)
-│   └── images/
-├── styles/
-│   └── globals.css              # Tailwind directives & custom CSS
+├── public/images/               # Static assets & page-specific images
+├── app/globals.css              # Global styles & custom CSS
 ├── tailwind.config.cjs          # Tailwind configuration
 ├── postcss.config.cjs           # PostCSS configuration
 ├── tsconfig.json                # TypeScript configuration
@@ -60,59 +52,53 @@ hivfellowship-v3/
 └── package.json                 # Dependencies & scripts
 ```
 
-## Getting Started
+## 🔧 Getting Started
 
 1. **Install dependencies**  
    ```bash
    npm install
    ```
 
-2. **Run the development server**  
+2. **Run development server**  
    ```bash
    npm run dev
    # Open http://localhost:3000
    ```
 
-3. **Build for production**  
+3. **Build & start**  
    ```bash
    npm run build
    npm start
    ```
 
-## Content Management
+## ✏️ Content Management
 
-All page content is driven by JSON files in `/data`. To update:
+- Edit or extend page content by modifying the JSON files in `/data`.
+- No additional code changes required—pages auto‑render JSON content.
 
-1. Edit the corresponding JSON file (e.g. `data/about.json`).
-2. Save and refresh—no code changes needed!
+## 📸 Images & Assets
 
-## Images & Assets
+- Place images under `public/images` in subfolders matching pages (e.g., `public/images/apply/apply-ss.png`).
+- Use Next.js `<Image>` component for optimized loading.
 
-Store images in `public/images` under subfolders matching each page. Reference via Next.js’s `<Image>`:
+## 📦 Deployment
 
-```tsx
-import Image from 'next/image';
+Push to GitHub and Vercel will auto‑deploy the `main` branch.  
+Configure environment variables in the Vercel dashboard as needed.
 
-<Image src="/images/about/team.jpg" width={600} height={400} alt="Team" />
-```
+## 🤝 Contributing
 
-## Deployment
+1. Fork the repo and create a branch:  
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+2. Commit your changes:  
+   ```bash
+   git add .
+   git commit -m "feat: add new feature"
+   ```
+3. Push and open a PR against `main`.
 
-Seamless deployment on Vercel:
-1. Commit and push your changes to GitHub.
-2. Vercel will auto-deploy your `main` branch to production.
+## 📄 License
 
-## Contributing
-
-Feel free to open issues or PRs. Run `npm run lint` before committing:
-
-```bash
-git checkout -b feature/your-feature
-git add .
-git commit -m "feat: add new feature"
-git push origin feature/your-feature
-```
-
-## License
-
-Licensed under MIT.
+MIT © [Your Organization]

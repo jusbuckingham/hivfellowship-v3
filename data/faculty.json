@@ -65,11 +65,6 @@
     "image": "/images/who-we-are/faculty/katherine-headshot.jpeg"
   },
   {
-    "name": "Kevin Tangonan, DO, AAHIVS",
-    "role": "Family Medicine/ HIV Primary Care",
-    "image": "/images/who-we-are/faculty/kevin-tangonan.jpg"
-  },
-  {
     "name": "Becca Cohen, MD, MPH, AAHIVS",
     "role": "Family Medicine/ HIV Primary Care",
     "image": "/images/who-we-are/faculty/becca-cohen.jpg"
@@ -83,5 +78,10 @@
     "name": "Johan Clarke, MD, AAHIVS",
     "role": "HIV Primary Care/ Gender Affirming Care/ Addiction Medicine",
     "image": "/images/who-we-are/faculty/johan-clarke.png"
+  },
+  {
+    "name": "Kevin Tangonan, DO, AAHIVS",
+    "role": "Family Medicine/ HIV Primary Care",
+    "image": "/images/who-we-are/faculty/kevin-tangonan.jpg"
   }
 ]

@@ -1,12 +1,6 @@
 {
   "current": [
     {
-      "name": "Kenya Bingham-Psalms, MD",
-      "classOf": 2026,
-      "bio": "Growing up in a military family, Dr. Bingham-Psalms’ upbringing was enriched with cultural diversity. She is bilingual in English and Spanish, a passion she pursued from a young age. As a first-generation college graduate, she earned a BA in Spanish Language and Literature from the University of California, Berkeley and was among the first US graduates from the Latin American School of Medicine in Havana, Cuba. After medical school, she supported her family while studying for the USMLEs and completed her Family Medicine residency in rural Pennsylvania, all while raising three children. She shares her journey to inspire others to achieve their dreams, even through unconventional paths. She is now excited to further her medical expertise in HIV medicine with special interests in medical missions, global health, healthcare disparities and women’s health. Her research interests include healthcare disparities in HIV, HIV prevention, awareness and education.",
-      "image": "/images/who-we-are/fellows/kenya-bingham-psalms.jpg"
-    },
-    {
       "name": "Thomasina Blackwater, MD",
       "classOf": 2027,
       "bio": "Dr. Thomasina Blackwater, a Diné (Navajo) physician from New Mexico, earned her MPH in Maternal and Child Health and later her MD from the University of Arizona. Before medical school, she worked on tribal community-based participatory research projects focused on diabetes prevention and education on the Navajo and Hualapai reservations. She completed her Family Medicine residency at Harbor-UCLA. Her clinical focus is HIV primary care, addiction medicine, and caring for medically underserved populations. Her research interests include stigma in HIV and substance use, stigma reduction strategies in clinical settings, and attitudes toward harm reduction.",
@@ -15,33 +9,57 @@
     {
       "name": "Heather Wynne, MD",
       "classOf": 2027,
-      "bio": "Dr. Wynne is a Family Medicine physician and graduate of Charles R. Drew University. Born in South Korea and adopted by an American family, she was raised in both Massachusetts and South Florida. She earned her undergraduate degree from Florida Atlantic University and her medical degree from Ross University School of Medicine. Dr. Wynne is passionate about working with underserved communities and has research interests in quality improvement, narrative medicine in HIV care, reducing new HIV diagnoses, and addressing disparities in HIV outcomes. In her free time, she enjoys mixed media art and all things related to cats.",
+      "bio": "Dr. Heather Wynne is a Family Medicine physician and graduate of Charles R. Drew University. Born in South Korea and adopted by an American family, she was raised in both Massachusetts and South Florida. She earned her undergraduate degree from Florida Atlantic University and her medical degree from Ross University School of Medicine. Dr. Wynne is passionate about working with underserved communities and has research interests in quality improvement, narrative medicine in HIV care, reducing new HIV diagnoses, and addressing disparities in HIV outcomes. In her free time, she enjoys mixed media art and all things related to cats.",
       "image": "/images/who-we-are/fellows/heather-wynne.jpg"
     },
     {
       "name": "Tiffany Yu, MD",
       "classOf": 2027,
-      "bio": "Dr. Yu grew up in the Philippines and Southern California, experiences that shaped her commitment to health equity. Her passion for serving underserved communities was strengthened through medical missions in Mexico, Honduras, and the Philippines. In medical school, she explored the biopsychosocial factors impacting people living with HIV, which deepened during residency as she witnessed gaps in HIV care among primary providers. These experiences solidified her dedication to HIV medicine. She is committed to advancing health equity and improving outcomes for people living with HIV through compassionate care, advocacy, and continuous learning.",
+      "bio": "Dr. Tiffany Yu grew up in the Philippines and Southern California, experiences that shaped her commitment to health equity. Her passion for serving underserved communities was strengthened through medical missions in Mexico, Honduras, and the Philippines. In medical school, she explored the biopsychosocial factors impacting people living with HIV, which deepened during residency as she witnessed gaps in HIV care among primary providers. These experiences solidified her dedication to HIV medicine. She is committed to advancing health equity and improving outcomes for people living with HIV through compassionate care, advocacy, and continuous learning.",
       "image": "/images/who-we-are/fellows/tiffany-yu.jpg"
+    },
+    {
+      "name": "Kenya Bingham-Psalms, MD",
+      "classOf": 2026,
+      "bio": "Growing up in a military family, Dr. Bingham-Psalms’ upbringing was enriched with cultural diversity. She is bilingual in English and Spanish, a passion she pursued from a young age. As a first-generation college graduate, she earned a BA in Spanish Language and Literature from the University of California, Berkeley and was among the first US graduates from the Latin American School of Medicine in Havana, Cuba. After medical school, she supported her family while studying for the USMLEs and completed her Family Medicine residency in rural Pennsylvania, all while raising three children. She shares her journey to inspire others to achieve their dreams, even through unconventional paths. She is now excited to further her medical expertise in HIV medicine with special interests in medical missions, global health, healthcare disparities and women’s health. Her research interests include healthcare disparities in HIV, HIV prevention, awareness and education.",
+      "image": "/images/who-we-are/fellows/kenya-bingham-psalms.jpg"
+    },
+    {
+      "name": "Zachariah Badii, MD",
+      "classOf": 2026,
+      "bio": "Dr. Badii, a native of San Diego, CA, was raised by immigrant parents and is passionately committed to addressing sex disparities in HIV prevention and treatment. As a fluent Spanish speaker with experience living, working, and studying on both sides of the southern border, Dr. Badii brings a unique perspective to the field. Having graduated from the Family Medicine program at the University of Southern California, Dr. Badii is dedicated to providing holistic and comprehensive care. This commitment extends to addressing social determinants of health through evidence-based public health interventions reflecting a deep understanding of the multifaceted nature of healthcare and a desire to make a positive impact.\n\nMy research interests revolve around identifying and addressing bias in medical school and residency HIV curriculums, with a focus on promoting inclusivity and accuracy in educational materials. Additionally, I am passionate about investigating and mitigating sex disparities in HIV prevention and treatment strategies to ensure equitable healthcare outcomes for all individuals.",
+      "image": "/images/who-we-are/fellows/zachariah-badii.jpg"
     }
   ],
   "alumni": [
-    { "name": "Licho Aguilera, MD", "classOf": 2025 },
-    { "name": "Bianca Hill, MD, MPH", "classOf": 2025 },
-    { "name": "Mark Leiber, MD", "classOf": 2025 },
-    { "name": "Zachariah Badii, MD", "classOf": 2025 },
-    { "name": "Tri Trang, MD, AAHIVS", "classOf": 2022 },
-    { "name": "Jonathan Kao, MD, AAHIVS", "classOf": 2022 },
-    { "name": "Emma Allseits, MD, AAHIVS", "classOf": 2021 },
-    { "name": "Jessica Schneider, MD, AAHIVS", "classOf": 2020 },
-    { "name": "Norris Tran Duc, MD, AAHIVS", "classOf": 2020 },
-    { "name": "Kevin Tangonan, DO, AAHIVS", "classOf": 2020 },
-    { "name": "Michael Stefanowicz, MD, AAHIVS", "classOf": 2020 },
-    { "name": "Jolie Leblanc, MD, AAHIVS", "classOf": 2019 },
-    { "name": "Rafael Chiquillo-Sosa, MD, AAHIVS", "classOf": 2019 },
-    { "name": "Summer Drake, DO, AAHIVS", "classOf": 2019 },
-    { "name": "Becca Cohen, MD, MPH, AAHIVS", "classOf": 2018 },
-    { "name": "Lauren Wolchok, MD, AAHIVS", "classOf": 2018 },
-    { "name": "Revery Barnes, MD, AAHIVS", "classOf": 2018 }
+    { "name": "Licho Aguilera, MD", "classOf": 2025, "image": "/images/who-we-are/fellows/licho-aguilera.jpg" },
+    { "name": "Bianca Hill, MD, MPH", "classOf": 2025, "image": "/images/who-we-are/fellows/bianca-hill.jpg" },
+    { "name": "Mark Leiber, MD", "classOf": 2025, "image": "/images/who-we-are/fellows/mark-leiber.jpg" },
+    { "name": "Johan Clarke, MD", "classOf": 2024, "image": "/images/who-we-are/fellows/johan-clarke.jpg" },
+    { "name": "Jessica Farmer, MD", "classOf": 2024, "image": "/images/who-we-are/fellows/jessica-farmer.jpg" },
+    { "name": "Earl Gerald Carlos, DO, AAHIVS", "classOf": 2023, "image": "/images/who-we-are/fellows/earl-gerald-carlos.jpg" },
+    { "name": "Rebecca Lee, DO, AAHIVS", "classOf": 2023, "image": "/images/who-we-are/fellows/rebecca-lee.jpg" },
+    { "name": "Oliver Refugio, MD, MPH, AAHIVS", "classOf": 2023, "image": "/images/who-we-are/fellows/oliver-refugio.jpg" },
+    { "name": "Tri Trang, MD, AAHIVS", "classOf": 2022, "image": "/images/who-we-are/fellows/tri-trang.jpg" },
+    { "name": "Jonathan Kao, MD, AAHIVS", "classOf": 2022, "image": "/images/who-we-are/fellows/jonathan-kao.jpg" },
+    { "name": "Emma Allseits, MD, AAHIVS", "classOf": 2021, "image": "/images/who-we-are/fellows/emma-allseits.jpg" },
+    { "name": "Jessica Schneider, MD, AAHIVS", "classOf": 2020, "image": "/images/who-we-are/fellows/jessica-schneider.jpg" },
+    { "name": "Norris Tran Duc, MD, AAHIVS", "classOf": 2020, "image": "/images/who-we-are/fellows/norris-tran-duc.jpg" },
+    { "name": "Kevin Tangonan, DO, AAHIVS", "classOf": 2020, "image": "/images/who-we-are/fellows/kevin-tangonan.jpg" },
+    { "name": "Michael Stefanowicz, MD, AAHIVS", "classOf": 2020, "image": "/images/who-we-are/fellows/michael-stefanowicz.jpg" },
+    { "name": "Jolie Leblanc, MD, AAHIVS", "classOf": 2019, "image": "/images/who-we-are/fellows/jolie-leblanc.jpg" },
+    { "name": "Rafael Chiquillo-Sosa, MD, AAHIVS", "classOf": 2019, "image": "/images/who-we-are/fellows/rafael-chiquillo-sosa.jpg" },
+    { "name": "Summer Drake, DO, AAHIVS", "classOf": 2019, "image": "/images/who-we-are/fellows/summer-drake.jpg" },
+    { "name": "Becca Cohen, MD, MPH, AAHIVS", "classOf": 2018, "image": "/images/who-we-are/fellows/becca-cohen.jpg" },
+    { "name": "Lauren Wolchok, MD, AAHIVS", "classOf": 2018, "image": "/images/who-we-are/fellows/lauren-wolchok.jpg" },
+    { "name": "Revery Barnes, MD, AAHIVS", "classOf": 2018, "image": "/images/who-we-are/fellows/revery-barnes.jpg" }
+  ],
+  "careerImpact": [
+    "Medical Director",
+    "HIV Program Lead",
+    "Associate Medical Director",
+    "Clinic Site Director",
+    "Assistant Clinical Professor",
+    "Our alumni remain at the forefront of HIV care, research, and advocacy—continuing the mission of serving those most affected by the epidemic."
   ]
 }

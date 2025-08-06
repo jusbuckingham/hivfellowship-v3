@@ -1,7 +1,3 @@
-
-
-// app/who-we-are/faculty/page.tsx
-
 import Layout from '../../../components/Layout';
 import faculty from '../../../data/faculty.json';
 import Image from 'next/image';
@@ -10,26 +6,43 @@ export default function FacultyPage() {
   return (
     <Layout>
       <article className="space-y-10">
-        <header className="space-y-4">
-          <h1 className="text-4xl font-bold">Faculty</h1>
-        </header>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {faculty.map((member, idx) => (
-            <div key={idx} className="flex items-center space-x-4">
-              <Image
-                src={member.image}
-                width={80}
-                height={80}
-                alt={member.name}
-                className="rounded-full"
-              />
-              <div>
+        <section className="space-y-8">
+          <h2 className="text-2xl font-semibold">Leadership</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {faculty.slice(0, 8).map((member, idx) => (
+              <div key={idx} className="flex flex-col items-center text-center space-y-2">
+                <Image
+                  src={member.image}
+                  width={100}
+                  height={100}
+                  alt={member.name}
+                  className="rounded-full"
+                />
                 <h3 className="text-xl font-semibold">{member.name}</h3>
                 <p className="text-gray-700">{member.role}</p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </section>
+
+        <section className="space-y-8">
+          <h2 className="text-2xl font-semibold">Clinical Team</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {faculty.slice(8).map((member, idx) => (
+              <div key={idx} className="flex flex-col items-center text-center space-y-2">
+                <Image
+                  src={member.image}
+                  width={100}
+                  height={100}
+                  alt={member.name}
+                  className="rounded-full"
+                />
+                <h3 className="text-xl font-semibold">{member.name}</h3>
+                <p className="text-gray-700">{member.role}</p>
+              </div>
+            ))}
+          </div>
         </section>
       </article>
     </Layout>

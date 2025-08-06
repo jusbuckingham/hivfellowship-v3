@@ -3,25 +3,44 @@
     "Candidates will be competitively selected through a national search for this two-year clinical fellowship program.",
     "Those selected will participate in the HIV Clinical Leadership program with full fellowship salary and benefits."
   ],
-  "callToAction": "Apply today! Please click here to access the application form",
-  "roles": [
-    "Family Medicine",
-    "Internal Medicine",
-    "Medicine-Pediatrics"
-  ],
-  "eligibility": [
-    "Applicants must have completed an accredited United States medical residency program.",
-    "The fellowship does not support any international visas."
-  ],
-  "maxCandidates": 4,
+  "applicationProcess": {
+    "description": "Application Process",
+    "maxCandidates": 4,
+    "note": "Up to 4 fellows may be selected for each cohort."
+  },
   "missionDriven": [
     "Are committed to working with underserved and marginalized communities",
     "Aspire to take on leadership roles in HIV primary and specialty care",
     "Seek to advance health equity through clinical practice, education, and advocacy"
   ],
+  "boardEligibility": {
+    "description": "The HIV Clinical Leadership Porgram is seeking applicants who are board eligible or board certified in:",
+    "roles": [
+      "Family Medicine",
+      "Internal Medicine",
+      "Medicine-Pediatrics"
+    ]
+  },
+  "eligibility": [
+    "Applicants must have completed an accredited United States medical residency program.",
+    "The fellowship does not support any international visas."
+  ],
+  "callToAction": "Apply today! Please click here to access the application form",
   "contact": {
     "name": "Shanna Livermore, MPH, MCHES, FRSPH",
-    "title": "Director of Operations, HIV Clinical Leadership Program; Co-Director, Pacific AIDS Education and Training Center at USC",
+    "positions": [
+      "Director of Operations, HIV Clincal Leadership Program",
+      "Co-Director, Pacific AIDS Education and Training Center at USC"
+    ],
     "email": "shanna.livermore@lundquist.org"
+  },
+  "form": {
+    "fields": [
+      "First Name",
+      "Last Name",
+      "Email address",
+      "Message"
+    ],
+    "submitLabel": "Submit"
   }
 }
