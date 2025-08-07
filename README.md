@@ -101,4 +101,4 @@ Configure environment variables in the Vercel dashboard as needed.
 
 ## 📄 License
 
-MIT © [Your Organization]
+MIT © JKB21
