@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+}
 
 /* Custom overrides */
 :root {
@@ -38,6 +42,8 @@ body {
 .header-nav {
   flex: 1;
   overflow-x: auto;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .header-nav a {
@@ -89,8 +95,8 @@ body {
 /* Accessibility & responsive nav */
 .header-nav ul {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   padding: 0;
   margin: 0;
@@ -263,5 +269,13 @@ body {
   /* Remove any global body padding on mobile */
   body {
     padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 }
