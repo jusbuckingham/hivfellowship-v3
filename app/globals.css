@@ -99,7 +99,6 @@ body {
   gap: 1rem;
   padding: 0;
   margin: 0;
-  white-space: nowrap;
 }
 
 .header-nav a:focus-visible {
@@ -179,10 +178,9 @@ body {
 
 /* Full-width footer banner */
 .footer-banner {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  margin-left: -50vw;
+  width: 100%;
+  position: static;
+  margin: 0;
 }
 
 .footer-banner-img {
@@ -235,12 +233,6 @@ body {
   .application-form textarea {
     padding: 0.5rem;
     font-size: 0.9rem;
-  }
-
-  /* Contact card */
-  .footer-text,
-  .footer-logos {
-    padding: 1rem;
   }
 
   /* Footer banner */
