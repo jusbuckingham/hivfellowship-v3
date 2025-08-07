@@ -7,9 +7,9 @@ export default function FacultyPage() {
     <Layout>
       <article className="space-y-10 px-4 sm:px-6 md:px-8">
 
-        <section className="space-y-8">
-          <h2 className="text-xl sm:text-2xl font-semibold">Leadership</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-6 md:px-0">
+        <section className="space-y-8" aria-labelledby="leadership-heading">
+          <h2 id="leadership-heading" className="text-xl sm:text-2xl font-semibold mb-4">Leadership</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {faculty.slice(0, 8).map((member, idx) => (
               <div key={idx} className="flex flex-col items-center text-center space-y-1">
                 <Image
@@ -26,9 +26,9 @@ export default function FacultyPage() {
           </div>
         </section>
 
-        <section className="space-y-8">
-          <h2 className="text-xl sm:text-2xl font-semibold">Clinical Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 md:px-0">
+        <section className="space-y-8" aria-labelledby="clinical-team-heading">
+          <h2 id="clinical-team-heading" className="text-xl sm:text-2xl font-semibold mb-4">Clinical Team</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {faculty.slice(8).map((member, idx) => (
               <div key={idx} className="flex flex-col items-center text-center space-y-1">
                 <Image

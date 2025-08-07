@@ -1,6 +1,18 @@
+/* include border-box for consistent sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Ensure header navigation wraps and centers on all screens */
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
 
 /* Prevent horizontal overflow */
 html, body {
@@ -48,7 +60,6 @@ body {
 .header-nav a {
   color: #fff;
   text-decoration: none;
-  margin: 0 1rem;
   font-size: 1.125rem;
 }
 
@@ -195,19 +206,20 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .header-logo {
     margin: 0 0 0.5rem 0;
   }
 
+  .header-nav {
+    flex-basis: 100%;
+    margin-top: 0.5rem;
+  }
   .header-nav ul {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 0;
+    flex-direction: row;
   }
 
   .header-nav a {

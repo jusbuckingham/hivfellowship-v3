@@ -16,7 +16,7 @@ export default function ApplyPage() {
               width={1200}
               height={400}
               alt="Apply Page Screenshot"
-              className="w-1/2 h-auto"
+              className="w-full sm:w-3/4 md:w-1/2 h-auto"
             />
           </div>
           <div className="max-w-3xl mx-auto">
@@ -55,13 +55,20 @@ export default function ApplyPage() {
 
         {/* Call to Apply */}
         <section>
-          <p className="text-lg text-gray-700 mt-8">Apply today!</p>
-          <p className="text-lg text-gray-700">
-            Please{' '}
-            <Link href="#" className="text-blue-600 hover:underline">
-              click here to access the application form
-            </Link>
-          </p>
+          <div className="text-center space-y-2 sm:text-left mt-8">
+            <p className="text-lg text-gray-700">Apply today!</p>
+            <p className="text-lg text-gray-700">
+              Please{' '}
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                click here to access the application form
+              </a>
+            </p>
+          </div>
         </section>
 
         <section>
@@ -83,18 +90,22 @@ export default function ApplyPage() {
 
         <section className="mb-12">
           <h2 className="text-xl sm:text-2xl font-semibold mb-3">Application Form</h2>
-          <form className="application-form space-y-6 max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <form className="application-form space-y-6 max-w-md mx-auto bg-white p-6 sm:p-8 rounded-lg shadow-lg">
             {apply.form.fields.map((field, idx) => (
               <div key={idx}>
-                <label className="block text-sm font-medium text-gray-700 mb-2">{field}</label>
+                <label htmlFor={`field-${idx}`} className="block text-sm font-medium text-gray-700 mb-2">
+                  {field}
+                </label>
                 {field === 'Message' ? (
                   <textarea
+                    id={`field-${idx}`}
                     className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500"
                     rows={4}
                     placeholder={field}
                   />
                 ) : (
                   <input
+                    id={`field-${idx}`}
                     type={field === 'Email address' ? 'email' : 'text'}
                     className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500"
                     placeholder={field}

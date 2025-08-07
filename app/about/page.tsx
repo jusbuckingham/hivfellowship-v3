@@ -22,11 +22,11 @@ export default function AboutPage() {
         <article className="space-y-10">
           <header className="space-y-4">
             <h1 id="about-heading" className="text-3xl sm:text-4xl font-bold text-center">{about.title}</h1>
-            <p className="text-lg sm:text-left text-center text-gray-700">{about.purpose}</p>
+            <p className="text-center sm:text-left text-lg text-gray-700">{about.purpose}</p>
           </header>
 
           <section className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-semibold">Program</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold mb-4">Program</h2>
             <p className="text-gray-700">{about.program.description}</p>
             <ol className="list-decimal pl-4 sm:pl-8 space-y-2">
               {about.program.qualifiedPhysicians.map((item, idx) => (

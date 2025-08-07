@@ -11,8 +11,8 @@ export default function CurriculumPage() {
           <h1 className="text-3xl sm:text-4xl font-bold">Curriculum Outline</h1>
         </header>
 
-        <section className="space-y-8 px-0 sm:px-0 md:px-0">
-          <h2 className="text-xl sm:text-2xl font-semibold">YEAR 1, Session 1 (6 months)</h2>
+        <section className="space-y-8">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4">YEAR 1, Session 1 (6 months)</h2>
           <h3 className="text-lg sm:text-xl font-medium">Scholarship/ Leadership Development</h3>
           <ul className="list-disc pl-4 sm:pl-6 space-y-2">
             {curriculum.year1.session1.scholarshipLeadershipDevelopment.map((item, idx) => (
@@ -33,8 +33,8 @@ export default function CurriculumPage() {
           </ul>
         </section>
 
-        <section className="space-y-8 px-0 sm:px-0 md:px-0">
-          <h2 className="text-xl sm:text-2xl font-semibold">YEAR 1, Session 2 (6 months)</h2>
+        <section className="space-y-8">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4">YEAR 1, Session 2 (6 months)</h2>
           <h3 className="text-lg sm:text-xl font-medium">Clinical Training/ Care</h3>
           <ul className="list-disc pl-4 sm:pl-6 space-y-2">
             {curriculum.year1.session2.clinicalTrainingCare.map((item, idx) => (
@@ -61,8 +61,8 @@ export default function CurriculumPage() {
           </ul>
         </section>
 
-        <section className="space-y-8 px-0 sm:px-0 md:px-0">
-          <h2 className="text-xl sm:text-2xl font-semibold">YEAR 2</h2>
+        <section className="space-y-8">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4">YEAR 2</h2>
           <h3 className="text-lg sm:text-xl font-medium">Clinical Training/ Care</h3>
           <ul className="list-disc pl-4 sm:pl-6 space-y-2">
             {curriculum.year2.clinicalTrainingCare.map((item, idx) => (
@@ -83,8 +83,8 @@ export default function CurriculumPage() {
           </div>
         </section>
 
-        <section className="space-y-8 px-0 sm:px-0 md:px-0">
-          <h2 className="text-xl sm:text-2xl font-semibold">Core Clinical Training Experiences</h2>
+        <section className="space-y-8">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4">Core Clinical Training Experiences</h2>
 
           <h3 className="text-lg sm:text-xl font-medium">HIV Primary Care</h3>
           <p className="text-gray-700 text-base sm:text-lg">
@@ -120,8 +120,8 @@ export default function CurriculumPage() {
           </p>
         </section>
 
-        <section className="space-y-8 px-0 sm:px-0 md:px-0">
-          <h2 className="text-xl sm:text-2xl font-semibold">Teaching/ Training Opportunities</h2>
+        <section className="space-y-8">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4">Teaching/ Training Opportunities</h2>
           <p className="text-gray-700 text-base sm:text-lg">
             Development of advanced teaching/training skills in fellows is a key goal of our programs. Fellows are expected to participate in and develop trainings for varied learners from patients to medical students and health professionals of different levels. Fellows will develop a minimum of one original, interactive HIV or HIV-related presentation for providers.
           </p>

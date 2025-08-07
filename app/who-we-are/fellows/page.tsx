@@ -15,17 +15,23 @@ export default function FellowsPage() {
         </header>
 
         {/* Class of 2027 */}
-        <section>
-          <h2 className="purple-heading">Class of 2027</h2>
+        <section aria-labelledby="class-of-2027-heading">
+          <h2
+            id="class-of-2027-heading"
+            className="purple-heading mb-4"
+            style={{ scrollMarginTop: '4rem' }}
+          >
+            Class of 2027
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {currentFellows
               .filter(f => f.classOf === 2027)
-              .map((fellow, idx) => (
-                <div key={idx} className="text-center">
+              .map((fellow) => (
+                <div key={fellow.name} className="text-center">
                   <Image
                     src={fellow.image}
-                    width={100}
-                    height={100}
+                    width={120}
+                    height={120}
                     alt={fellow.name}
                     className="rounded-full mb-4"
                   />
@@ -38,17 +44,23 @@ export default function FellowsPage() {
         </section>
 
         {/* Class of 2026 */}
-        <section>
-          <h2 className="purple-heading">Class of 2026</h2>
+        <section aria-labelledby="class-of-2026-heading">
+          <h2
+            id="class-of-2026-heading"
+            className="purple-heading mb-4"
+            style={{ scrollMarginTop: '4rem' }}
+          >
+            Class of 2026
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {currentFellows
               .filter(f => f.classOf === 2026)
-              .map((fellow, idx) => (
-                <div key={idx} className="text-center">
+              .map((fellow) => (
+                <div key={fellow.name} className="text-center">
                   <Image
                     src={fellow.image}
-                    width={100}
-                    height={100}
+                    width={120}
+                    height={120}
                     alt={fellow.name}
                     className="rounded-full mb-4"
                   />
