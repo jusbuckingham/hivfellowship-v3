@@ -48,12 +48,12 @@ hivfellowship-v3/
 ├── postcss.config.cjs           # PostCSS configuration
 ├── tsconfig.json                # TypeScript configuration
 ├── next.config.js               # Next.js configuration
-└── package.json                 # Dependencies & scripts
+└── design-docs/                 # Design assets and wireframes
 ```
 
 ## 📐 Design Documentation
 
-All design specifications, wireframes, and style guides are maintained in the `hiv-fellowship-design-docs/` directory. Feel free to review or update the design assets there to keep the site’s look consistent.
+All design specifications, wireframes, and style guides are maintained in the `design-docs/` directory. Feel free to review or update the design assets there to keep the site’s look consistent.
 
 ## 🔧 Getting Started
 
