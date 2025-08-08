@@ -20,50 +20,16 @@ export default function Footer() {
 
       {/* Logo strip */}
       <div className="container mx-auto px-4 sm:px-6 md:px-8">
-      <div className="footer-logos flex-wrap">
-        <Image
-          src="/images/program/partnerships/health-services-lac.png"
-          alt="Health Services Los Angeles County"
-          className="footer-logo"
-          width={150}
-          height={50}
-        />
-        <Image
-          src="/images/program/partnerships/kecklogo.jpeg"
-          alt="Keck School of Medicine of USC"
-          className="footer-logo"
-          width={150}
-          height={50}
-        />
-        <Image
-          src="/images/logos/cdu.png"
-          alt="Charles R. Drew University"
-          className="footer-logo"
-          width={150}
-          height={50}
-        />
-        <Image
-          src="/images/program/partnerships/ucla-ncsp.png"
-          alt="UCLA National Clinician Scholars Program"
-          className="footer-logo"
-          width={150}
-          height={50}
-        />
-        <Image
-          src="/images/program/partnerships/lundquist.png"
-          alt="The Lundquist Institute"
-          className="footer-logo"
-          width={150}
-          height={50}
-        />
-        <Image
-          src="/images/program/partnerships/viivlogo.png"
-          alt="ViiV Healthcare"
-          className="footer-logo"
-          width={150}
-          height={50}
-        />
-      </div>
+        <div className="footer-logos flex justify-center">
+          <Image
+            src="/images/footer/hiv-fellowship-logo-bar.png"
+            alt="Partner logos"
+            className="footer-logo-bar w-full h-auto"
+            width={1200}
+            height={100}
+            priority
+          />
+        </div>
 
       {/* Bottom copyright text */}
       <div className="footer-text text-center mt-6">

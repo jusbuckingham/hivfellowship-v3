@@ -7,12 +7,6 @@
 @tailwind utilities;
 
 /* Ensure header navigation wraps and centers on all screens */
-header nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
 
 /* Prevent horizontal overflow */
 html, body {
@@ -23,6 +17,7 @@ html, body {
 :root {
   --background: #ffffff;
   --foreground: #1f2937;
+  --primary-purple: #1C297B;
 }
 
 html {
@@ -36,9 +31,12 @@ body {
 }
 
 .site-header {
-  background-color: #1B237E; /* deep navy */
+  background-color: var(--primary-purple); /* deep navy */
   color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
   margin-bottom: 2rem;
 }
 
@@ -52,9 +50,11 @@ body {
 }
 
 .header-nav {
-  flex: 1;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
+  flex: 1;
 }
 
 .header-nav a {
@@ -68,14 +68,14 @@ body {
 }
 
 .header-logo {
-  width: 250px;
   flex-shrink: 0;
   height: auto;
+  max-width: 170px;
 }
 
 /* Footer Styling */
 .footer-text {
-  background-color: #1B237E; /* match header purple */
+  background-color: var(--primary-purple); /* match header purple */
   color: #fff;
   text-align: center;
   padding: 1.5rem 2rem;
@@ -103,14 +103,6 @@ body {
 }
 
 /* Accessibility & responsive nav */
-.header-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
 
 .header-nav a:focus-visible {
   outline: 2px dashed #ffffff;
@@ -119,7 +111,7 @@ body {
 
 /* Purple section heading for Class of... */
 .purple-heading {
-  background-color: #1B237E;
+  background-color: var(--primary-purple);
   color: #fff;
   display: block;
   width: 100%;
@@ -167,7 +159,7 @@ body {
   display: inline-block;
   width: 100%;
   padding: 0.75rem 1.5rem;
-  background-color: #1B237E;
+  background-color: var(--primary-purple);
   color: #ffffff;
   border: none;
   border-radius: 0.375rem;
@@ -178,7 +170,7 @@ body {
 }
 
 .application-form button:hover {
-  background-color: #0f144d;
+  filter: brightness(0.9);
   transform: scale(1.05);
 }
 
@@ -190,7 +182,6 @@ body {
 /* Full-width footer banner */
 .footer-banner {
   width: 100%;
-  position: static;
   margin: 0;
 }
 
@@ -249,16 +240,13 @@ body {
 
   /* Footer banner */
   .footer-banner {
-    position: static;
-    left: auto;
-    margin-left: 0;
     width: 100%;
   }
 
   /* Override full-viewport headings on mobile */
   .purple-heading {
-    margin-left: 0;
     width: 100%;
+    margin-left: 0;
     padding: 0.75rem 1rem;
   }
 
@@ -281,4 +269,11 @@ body {
     margin: 0 auto;
     padding: 0 1rem;
   }
+}
+/* Combined footer logo bar */
+.footer-logo-bar {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

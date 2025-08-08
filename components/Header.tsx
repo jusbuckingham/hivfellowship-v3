@@ -8,14 +8,14 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header role="banner" className="site-header w-full bg-[#1F2377]">
+    <header role="banner" className="site-header w-full bg-[#1C297B]">
       <div className="flex items-center justify-between w-full px-6 py-9 sm:px-8 sm:py-12 md:px-12 md:py-16">
         <Image
           src="/images/header/logo-ss.png"
           alt="HIV Clinical Fellowship Logo"
           className="header-logo max-w-[60%] sm:max-w-[40%]"
-          width={250}
-          height={80}
+          width={170}
+          height={54}
           priority
         />
         <nav className="header-nav flex flex-wrap justify-center gap-6" aria-label="Main navigation">
