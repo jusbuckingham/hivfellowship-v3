@@ -5,7 +5,6 @@ A JSON-driven, content-managed website for the HIV Clinical Fellowship program. 
 ## 🚀 Features
 
 - **App Router**: Leverages Next.js 15’s App Router for layouts, nested routing, and server components.
-- **JSON Content**: All page copy and data (about, program details, curriculum, faculty, fellows, apply) lives in `/data/*.json`.
 - **Responsive & Accessible**: Mobile-first design with semantic HTML, accessible navigation, and form controls.
 - **Custom CSS**: Tailwind CSS setup with PostCSS, plus additional global styles in `app/globals.css`.
 - **Vercel Deployment**: One-click deploys on Vercel with instant previews on each PR.
@@ -52,6 +51,10 @@ hivfellowship-v3/
 └── package.json                 # Dependencies & scripts
 ```
 
+## 📐 Design Documentation
+
+All design specifications, wireframes, and style guides are maintained in the `hiv-fellowship-design-docs/` directory. Feel free to review or update the design assets there to keep the site’s look consistent.
+
 ## 🔧 Getting Started
 
 1. **Install dependencies**  
@@ -71,7 +74,7 @@ hivfellowship-v3/
    npm start
    ```
 
-## ✏️ Content Management
+## 📋 Content Management
 
 - Edit or extend page content by modifying the JSON files in `/data`.
 - No additional code changes required—pages auto‑render JSON content.
