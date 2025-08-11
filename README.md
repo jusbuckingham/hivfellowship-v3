@@ -1,24 +1,26 @@
-# HIV Clinical Fellowship v3
+# HIV Clinical Fellowship – v3
 
-A JSON-driven, content-managed website for the HIV Clinical Fellowship program. Built with Next.js (App Router), React, and TypeScript, the site uses structured JSON files for all page content and custom CSS for styling, making updates seamless and code-free.
+A modern, JSON-driven, content-managed website for the HIV Clinical Fellowship program. Designed for speed, accessibility, and effortless maintenance, it leverages Next.js (App Router), React, and TypeScript with structured JSON content and custom CSS.
 
 ## 🚀 Features
 
-- **App Router**: Leverages Next.js 15’s App Router for layouts, nested routing, and server components.
-- **Responsive & Accessible**: Mobile-first design with semantic HTML, accessible navigation, and form controls.
-- **Custom CSS**: Tailwind CSS setup with PostCSS, plus additional global styles in `app/globals.css`.
-- **Vercel Deployment**: One-click deploys on Vercel with instant previews on each PR.
+- **Next.js App Router**: Harness layouts, nested routes, and server components for a seamless user experience.  
+- **Responsive & Accessible**: Mobile-first design with semantic HTML and accessible navigation ensures usability for all.  
+- **Custom Styling**: Tailwind CSS with PostCSS plus global styles for a polished, consistent look.  
+- **Instant Previews & Deploys**: One-click deployment on Vercel with automatic previews on every pull request.
 
 ## 🛠 Tech Stack
 
-- **Next.js** (App Router)  
-- **React**  
-- **TypeScript**  
-- **Tailwind CSS** & **PostCSS**  
-- **JSON** for content  
-- **Vercel** for hosting
+- **Next.js (App Router)** – Modern routing and server components  
+- **React** – Interactive UI building blocks  
+- **TypeScript** – Type-safe development  
+- **Tailwind CSS & PostCSS** – Utility-first styling with post-processing  
+- **JSON** – Easy content management  
+- **Vercel** – Fast, scalable hosting and deployment
 
 ## 📁 Project Structure
+
+Organized for clarity, maintainability, and scalability.
 
 ```
 hivfellowship-v3/
@@ -53,9 +55,11 @@ hivfellowship-v3/
 
 ## 📐 Design Documentation
 
-All design specifications, wireframes, and style guides are maintained in the `design-docs/` directory. Feel free to review or update the design assets there to keep the site’s look consistent.
+Refer to the `design-docs/` directory for the latest design specs, wireframes, and style guides to ensure consistent visuals.
 
 ## 🔧 Getting Started
+
+Clone the repo and follow these steps:
 
 1. **Install dependencies**  
    ```bash
@@ -76,22 +80,19 @@ All design specifications, wireframes, and style guides are maintained in the `d
 
 ## 📋 Content Management
 
-- Edit or extend page content by modifying the JSON files in `/data`.
-- No additional code changes required—pages auto‑render JSON content.
+Edit JSON files in `/data` to update content instantly. Changes reflect immediately without redeploying—unless you modify images or code.
 
 ## 📸 Images & Assets
 
-- Place images under `public/images` in subfolders matching pages (e.g., `public/images/apply/apply-ss.png`).
-- Use Next.js `<Image>` component for optimized loading.
+Store images under `public/images` in page-specific folders (e.g., `public/images/apply/apply-ss.png`). For best performance, use optimized formats like `.webp`. Use Next.js `<Image>` for automatic optimization.
 
 ## 📦 Deployment
 
-Push to GitHub and Vercel will auto‑deploy the `main` branch.  
-Configure environment variables in the Vercel dashboard as needed.
+Push to `main` and Vercel automatically deploys your site with instant previews on pull requests.
 
 ## 🤝 Contributing
 
-1. Fork the repo and create a branch:  
+1. Fork and create a branch:  
    ```bash
    git checkout -b feature/your-feature
    ```
