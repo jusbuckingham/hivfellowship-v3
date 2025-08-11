@@ -1,23 +1,97 @@
-// app/apply/page.tsx
+'use client';
 
 import Layout from '../../components/Layout';
 import apply from '../../data/apply.json';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect, useCallback } from 'react';
+
+const carouselImages = [
+  { src: '/images/apply/hiv-fellowship-grads-1.jpeg', alt: 'HIV Fellowship graduates photo 1' },
+  { src: '/images/apply/hiv-fellowship-grads-2.png', alt: 'HIV Fellowship graduates photo 2' },
+  { src: '/images/apply/hiv-fellowship-grads-3.png', alt: 'HIV Fellowship graduates photo 3' },
+];
+
+function Carousel({ images }: { images: { src: string; alt: string }[] }) {
+  const [index, setIndex] = useState(0);
+
+  const goTo = useCallback((i: number) => {
+    setIndex((i + images.length) % images.length);
+  }, [images.length]);
+
+  const next = useCallback(() => goTo(index + 1), [goTo, index]);
+  const prev = useCallback(() => goTo(index - 1), [goTo, index]);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, [images.length]);
+
+  return (
+    <div className="relative w-full sm:w-3/4 md:w-1/2 mx-auto">
+      <div className="overflow-hidden rounded-lg">
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${index * 100}%)` }}
+        >
+          {images.map((img, i) => (
+            <div key={i} className="min-w-full">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                width={1200}
+                height={400}
+                priority={i === 0}
+                loading={i === 0 ? 'eager' : 'lazy'}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 75vw, 50vw"
+                className="w-full h-auto block"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* Controls */}
+      <button
+        type="button"
+        aria-label="Previous slide"
+        onClick={prev}
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full px-3 py-2 shadow focus:outline-none focus:ring"
+      >
+        ‹
+      </button>
+      <button
+        type="button"
+        aria-label="Next slide"
+        onClick={next}
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full px-3 py-2 shadow focus:outline-none focus:ring"
+      >
+        ›
+      </button>
+      {/* Dots */}
+      <div className="flex justify-center gap-2 mt-2">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`Go to slide ${i + 1}`}
+            onClick={() => goTo(i)}
+            className={`h-2 w-2 rounded-full ${i === index ? 'bg-gray-800' : 'bg-gray-300'}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function ApplyPage() {
   return (
     <Layout>
       <article className="space-y-10 pb-12 px-4 sm:px-6 md:px-8">
         <header className="space-y-4 pt-8">
-          <div className="flex justify-center mt-8 mb-8">
-            <Image
-              src="/images/apply/apply-ss.png"
-              width={1200}
-              height={400}
-              alt="Apply Page Screenshot"
-              className="w-full sm:w-3/4 md:w-1/2 h-auto"
-            />
+          <div className="mt-8 mb-8">
+            <Carousel images={carouselImages} />
           </div>
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-700">
@@ -60,7 +134,7 @@ export default function ApplyPage() {
             <p className="text-lg text-gray-700">
               Please{' '}
               <a
-                href="#"
+                href="https://docs.google.com/forms/d/1GMSQXZOlZGOeIpS9x5HphmJvW1ysE100_v8grsacItw/viewform?edit_requested=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
