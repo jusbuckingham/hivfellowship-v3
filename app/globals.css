@@ -38,12 +38,12 @@ body {
   top: 0;
   z-index: 50;
   margin-bottom: 2rem;
-  padding-block: 0.25rem;
+  padding-block: 0.275rem;
 }
 
 .header-container {
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.55rem 1.1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,7 +71,7 @@ body {
 .header-logo {
   flex-shrink: 0;
   height: auto;
-  max-width: 135px;
+  max-width: 148.5px;
   transition: max-width 0.2s ease-in-out;
 }
 
@@ -199,12 +199,12 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0.2rem 0.5rem;
+    padding: 0.22rem 0.55rem;
   }
 
   .header-logo {
     margin: 0;
-    max-width: 100px;
+    max-width: 110px;
   }
 
   .header-nav {
