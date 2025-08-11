@@ -11,16 +11,18 @@ export default function FacultyPage() {
           <h2 id="leadership-heading" className="text-xl sm:text-2xl font-semibold mb-4">Leadership</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {faculty.slice(0, 8).map((member, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center space-y-1">
+              <div key={idx} className="faculty-card flex flex-col items-center text-center pb-6">
                 <Image
                   src={member.image}
                   width={100}
                   height={100}
                   alt={member.name}
                   className="rounded-full"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 80px, (max-width: 1024px) 100px, 120px"
                 />
-                <h3 className="text-lg sm:text-xl font-semibold">{member.name}</h3>
-                <p className="text-gray-700 text-base sm:text-lg">{member.role}</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-0 leading-tight">{member.name}</h3>
+                <p className="text-gray-700 text-base sm:text-lg mt-0.5 mb-0 leading-tight">{member.role}</p>
               </div>
             ))}
           </div>
@@ -30,16 +32,18 @@ export default function FacultyPage() {
           <h2 id="clinical-team-heading" className="text-xl sm:text-2xl font-semibold mb-4">Clinical Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {faculty.slice(8).map((member, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center space-y-1">
+              <div key={idx} className="faculty-card flex flex-col items-center text-center pb-6">
                 <Image
                   src={member.image}
                   width={100}
                   height={100}
                   alt={member.name}
                   className="rounded-full"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 80px, (max-width: 1024px) 100px, 120px"
                 />
-                <h3 className="text-lg sm:text-xl font-semibold">{member.name}</h3>
-                <p className="text-gray-700 text-base sm:text-lg">{member.role}</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-0 leading-tight">{member.name}</h3>
+                <p className="text-gray-700 text-base sm:text-lg mt-0.5 mb-0 leading-tight">{member.role}</p>
               </div>
             ))}
           </div>

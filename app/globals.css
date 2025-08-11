@@ -282,3 +282,20 @@ body {
   display: block;
   margin: 0 auto;
 }
+
+/* Faculty card spacing tweaks */
+.faculty-card { margin-bottom: 2rem !important; padding-bottom: 0.5rem; }
+.faculty-card img { margin-bottom: 0.35rem; }
+.faculty-card h3 { margin: 0 !important; line-height: 1.15; }
+.faculty-card p { margin: 0.1rem 0 0 0 !important; line-height: 1.15; }
+
+/* Fellow card spacing tweaks */
+.fellow-card { margin-bottom: 2rem !important; padding-bottom: 0.5rem; }
+.fellow-card img { margin-bottom: 0.35rem; }
+.fellow-card h3 { margin: 0 !important; line-height: 1.15; }
+.fellow-card p { line-height: 1.5; }
+.fellow-card p:nth-of-type(1) { /* the Class of … line right under the name */
+  margin-top: 0.1rem !important;
+  margin-bottom: 0 !important;
+  line-height: 1.15;
+}

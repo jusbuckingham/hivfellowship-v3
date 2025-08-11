@@ -11,7 +11,7 @@ export default function Header() {
     <header role="banner" className="site-header w-full bg-[#1C297B]">
       <div className="flex items-center justify-between w-full px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8">
         <Image
-          src="/images/header/logo-ss.png"
+          src="/images/header/hiv-fellowship-logo-white.png"
           alt="HIV Clinical Fellowship Logo"
           className="header-logo max-w-[50%] sm:max-w-[35%]"
           width={150}

@@ -1,5 +1,3 @@
-// app/who-we-are/fellows/page.tsx
-
 import Layout from '../../../components/Layout';
 import fellowsData from '../../../data/fellows.json';
 import Image from 'next/image';
@@ -27,17 +25,19 @@ export default function FellowsPage() {
             {currentFellows
               .filter(f => f.classOf === 2027)
               .map((fellow) => (
-                <div key={fellow.name} className="text-center">
+                <div key={fellow.name} className="fellow-card flex flex-col items-center text-center">
                   <Image
                     src={fellow.image}
                     width={120}
                     height={120}
                     alt={fellow.name}
-                    className="rounded-full mb-4"
+                    className="rounded-full"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 96px, (max-width: 1024px) 120px, 120px"
                   />
-                  <h3 className="text-xl font-semibold mb-1">{fellow.name}</h3>
-                  <p className="text-sm text-gray-600 mb-2">Class of {fellow.classOf}</p>
-                  <p className="text-gray-700">{fellow.bio}</p>
+                  <h3 className="text-xl font-semibold mb-0 leading-tight">{fellow.name}</h3>
+                  <p className="text-sm text-gray-600 mt-0.5 mb-0 leading-tight">Class of {fellow.classOf}</p>
+                  <p className="text-gray-700 mt-3">{fellow.bio}</p>
                 </div>
               ))}
           </div>
@@ -56,17 +56,19 @@ export default function FellowsPage() {
             {currentFellows
               .filter(f => f.classOf === 2026)
               .map((fellow) => (
-                <div key={fellow.name} className="text-center">
+                <div key={fellow.name} className="fellow-card flex flex-col items-center text-center">
                   <Image
                     src={fellow.image}
                     width={120}
                     height={120}
                     alt={fellow.name}
-                    className="rounded-full mb-4"
+                    className="rounded-full"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 96px, (max-width: 1024px) 120px, 120px"
                   />
-                  <h3 className="text-xl font-semibold mb-1">{fellow.name}</h3>
-                  <p className="text-sm text-gray-600 mb-2">Class of {fellow.classOf}</p>
-                  <p className="text-gray-700">{fellow.bio}</p>
+                  <h3 className="text-xl font-semibold mb-0 leading-tight">{fellow.name}</h3>
+                  <p className="text-sm text-gray-600 mt-0.5 mb-0 leading-tight">Class of {fellow.classOf}</p>
+                  <p className="text-gray-700 mt-3">{fellow.bio}</p>
                 </div>
               ))}
           </div>
@@ -84,15 +86,17 @@ export default function FellowsPage() {
                   {alumni
                     .filter(a => a.classOf === year)
                     .map((alum, idx) => (
-                      <div key={idx} className="text-center">
+                      <div key={idx} className="fellow-card flex flex-col items-center text-center">
                         <Image
                           src={alum.image}
                           width={100}
                           height={100}
                           alt={alum.name}
-                          className="rounded-full mb-4 mx-auto"
+                          className="rounded-full mx-auto"
+                          loading="lazy"
+                          sizes="(max-width: 640px) 80px, (max-width: 1024px) 100px, 100px"
                         />
-                        <h4 className="text-lg font-semibold">{alum.name}</h4>
+                        <h4 className="text-lg font-semibold mb-0 leading-tight">{alum.name}</h4>
                       </div>
                     ))}
                 </div>
