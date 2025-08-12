@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header role="banner" className="site-header w-full bg-[#162363] full-bleed overflow-x-hidden">
       <div className="flex items-center justify-between w-full px-0 py-0 sm:px-0 sm:py-0.5 md:px-0 md:py-1">
-        <div className="logo-slot flex-none w-[220px] md:w-[300px] xl:w-[360px]">
+        <div className="logo-slot flex-none w-[160px] sm:w-[200px] md:w-[300px] xl:w-[360px]">
           <SmartImage
             src="/images/header/test-logo-ss.webp"
             alt="HIV Clinical Fellowship Logo"
@@ -20,7 +20,7 @@ export default function Header() {
             priority
           />
         </div>
-        <nav className="header-nav mx-auto flex items-center justify-center flex-1 min-w-0 whitespace-nowrap gap-10 md:gap-14 xl:gap-20 text-white text-base sm:text-[1.05rem] md:text-lg xl:text-xl" aria-label="Main navigation">
+        <nav className="header-nav mx-auto flex items-center justify-center flex-1 min-w-0 gap-2 sm:gap-6 md:gap-12 xl:gap-20 text-sm sm:text-base md:text-lg xl:text-xl whitespace-normal sm:whitespace-nowrap text-white" aria-label="Main navigation">
           <Link
             href="/"
             className={`py-0.5 sm:py-1 transition opacity-90 hover:opacity-100 ${pathname === '/' ? 'font-semibold' : 'font-medium'}`}
@@ -52,7 +52,7 @@ export default function Header() {
             Apply
           </Link>
         </nav>
-        <div className="logo-slot flex-none w-[220px] md:w-[300px] xl:w-[360px]" aria-hidden />
+        <div className="hidden sm:block logo-slot flex-none w-[160px] sm:w-[200px] md:w-[300px] xl:w-[360px]" aria-hidden />
       </div>
     </header>
   );

@@ -97,7 +97,7 @@ body {
 /* Keep logo visually sharp but within a slim bar */
 .site-header .logo-slot img {
   height: auto;
-  max-height: 72px; /* base size for mobile */
+  max-height: 64px; /* base size for mobile */
   width: auto;
   object-fit: contain;
   image-rendering: -webkit-optimize-contrast;
