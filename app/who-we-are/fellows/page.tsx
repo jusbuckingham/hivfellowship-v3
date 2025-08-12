@@ -1,6 +1,6 @@
 import Layout from '../../../components/Layout';
 import fellowsData from '../../../data/fellows.json';
-import Image from 'next/image';
+import SmartImage from '../../../components/SmartImage';
 
 export default function FellowsPage() {
   const { current: currentFellows, alumni, careerImpact } = fellowsData;
@@ -26,7 +26,7 @@ export default function FellowsPage() {
               .filter(f => f.classOf === 2027)
               .map((fellow) => (
                 <div key={fellow.name} className="fellow-card flex flex-col items-center text-center">
-                  <Image
+                  <SmartImage
                     src={fellow.image}
                     width={120}
                     height={120}
@@ -57,7 +57,7 @@ export default function FellowsPage() {
               .filter(f => f.classOf === 2026)
               .map((fellow) => (
                 <div key={fellow.name} className="fellow-card flex flex-col items-center text-center">
-                  <Image
+                  <SmartImage
                     src={fellow.image}
                     width={120}
                     height={120}
@@ -87,7 +87,7 @@ export default function FellowsPage() {
                     .filter(a => a.classOf === year)
                     .map((alum, idx) => (
                       <div key={idx} className="fellow-card flex flex-col items-center text-center">
-                        <Image
+                        <SmartImage
                           src={alum.image}
                           width={100}
                           height={100}

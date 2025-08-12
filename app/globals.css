@@ -28,22 +28,35 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   background: var(--background);
   color: var(--foreground);
+  margin: 0;
 }
 
 .site-header {
   background-color: var(--primary-purple); /* deep navy */
   color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
   position: sticky;
   top: 0;
   z-index: 50;
-  margin-bottom: 2rem;
-  padding-block: 0.275rem;
+  margin-bottom: 0;
+  padding-block: 0.05rem;
+}
+
+/* Header layout overrides to enforce slim height */
+.site-header > div {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+@media (min-width: 640px) {
+  .site-header > div { padding-top: 0.3rem; padding-bottom: 0.3rem; }
+}
+@media (min-width: 768px) {
+  .site-header > div { padding-top: 0.45rem; padding-bottom: 0.45rem; }
 }
 
 .header-container {
   width: 100%;
-  padding: 0.55rem 1.1rem;
+  padding: 0.41rem 1.1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,27 +65,49 @@ body {
 
 .header-nav {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 1rem;
   flex: 1;
+  gap: clamp(1rem, 3vw, 2.5rem);
 }
 
 .header-nav a {
   color: #fff;
   text-decoration: none;
   font-size: 1.125rem;
+  opacity: 0.95;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: opacity 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
 }
 
 .header-nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  opacity: 1;
 }
 
 .header-logo {
   flex-shrink: 0;
   height: auto;
-  max-width: 148.5px;
-  transition: max-width 0.2s ease-in-out;
+  margin: 0;
+}
+
+/* Keep logo visually sharp but within a slim bar */
+.site-header .logo-slot img {
+  height: auto;
+  max-height: 72px; /* base size for mobile */
+  width: auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+@media (min-width: 640px) {
+  .site-header .logo-slot img { max-height: 90px; }
+}
+@media (min-width: 1024px) {
+  .site-header .logo-slot img { max-height: 108px; } /* ~50% larger than 72px */
 }
 
 /* Footer Styling */
@@ -202,11 +237,6 @@ body {
     padding: 0.22rem 0.55rem;
   }
 
-  .header-logo {
-    margin: 0;
-    max-width: 110px;
-  }
-
   .header-nav {
     flex-basis: 100%;
     margin-top: 0.5rem;
@@ -220,7 +250,7 @@ body {
 
   .header-nav a {
     margin: 0;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem 0.75rem;
     font-size: 0.9rem;
     text-align: center;
   }
@@ -275,6 +305,19 @@ body {
     padding: 0 1rem;
   }
 }
+/* Remove main side padding when About banner is present */
+@media (min-width: 1024px) {
+  main:has(section[aria-labelledby="about-heading"]) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+@media (max-width: 640px) {
+  main:has(section[aria-labelledby="about-heading"]) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
 /* Combined footer logo bar */
 .footer-logo-bar {
   max-width: 100%;
@@ -298,4 +341,85 @@ body {
   margin-top: 0.1rem !important;
   margin-bottom: 0 !important;
   line-height: 1.15;
+}
+
+/* Full-bleed utility for edge-to-edge media (handles scrollbars & zoom) */
+.full-bleed {
+  --bleed-overscan: 3px; /* extend a hair past edges to avoid 1px gaps */
+  position: relative;
+  width: calc(100dvw + (2 * var(--bleed-overscan)));
+  max-width: calc(100dvw + (2 * var(--bleed-overscan)));
+  left: 50%;
+  right: 50%;
+  margin-left: calc(-50dvw - var(--bleed-overscan));
+  margin-right: calc(-50dvw - var(--bleed-overscan));
+}
+/* Fallback for browsers without dvw */
+@supports not (width: 100dvw) {
+  .full-bleed {
+    width: calc(100vw + (2 * var(--bleed-overscan)));
+    max-width: calc(100vw + (2 * var(--bleed-overscan)));
+    margin-left: calc(-50vw - var(--bleed-overscan));
+    margin-right: calc(-50vw - var(--bleed-overscan));
+  }
+}
+
+/* Optional helper: pull first section up if any top margin remains */
+.flush-under-header {
+  margin-top: 0 !important;
+}
+
+/* About page: make the first banner full-bleed under the header */
+section[aria-labelledby="about-heading"] > div:first-child {
+  --bleed-overscan: 3px;
+  position: relative;
+  max-width: calc(100dvw + (2 * var(--bleed-overscan)));
+  width: calc(100dvw + (2 * var(--bleed-overscan)));
+  left: 50%;
+  right: 50%;
+  margin-left: calc(-50dvw - var(--bleed-overscan));
+  margin-right: calc(-50dvw - var(--bleed-overscan));
+  margin-top: 0;
+  display: block;
+}
+@supports not (width: 100dvw) {
+  section[aria-labelledby="about-heading"] > div:first-child {
+    max-width: calc(100vw + (2 * var(--bleed-overscan)));
+    width: calc(100vw + (2 * var(--bleed-overscan)));
+    margin-left: calc(-50vw - var(--bleed-overscan));
+    margin-right: calc(-50vw - var(--bleed-overscan));
+  }
+}
+
+/* Generic full-width image rule */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reduced motion helper */
+@media (prefers-reduced-motion: reduce) {
+  .transition, .transition * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+/* Ensure .full-bleed header uses robust full-bleed utility */
+.site-header.full-bleed {
+  --bleed-overscan: 3px;
+  width: calc(100dvw + (2 * var(--bleed-overscan)));
+  max-width: calc(100dvw + (2 * var(--bleed-overscan)));
+  margin-left: calc(-50dvw - var(--bleed-overscan));
+  margin-right: calc(-50dvw - var(--bleed-overscan));
+  left: 50%;
+  right: 50%;
+}
+@supports not (width: 100dvw) {
+  .site-header.full-bleed {
+    width: calc(100vw + (2 * var(--bleed-overscan)));
+    max-width: calc(100vw + (2 * var(--bleed-overscan)));
+    margin-left: calc(-50vw - var(--bleed-overscan));
+    margin-right: calc(-50vw - var(--bleed-overscan));
+  }
 }

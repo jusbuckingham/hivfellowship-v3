@@ -1,28 +1,31 @@
 // app/about/page.tsx
 
 import Layout from '../../components/Layout';
-import Image from 'next/image';
+import SmartImage from '../../components/SmartImage';
 import about from '../../data/about.json';
 
 export default function AboutPage() {
   return (
     <Layout>
-      <section aria-labelledby="about-heading">
-        <div className="mb-8 px-4 sm:px-6 md:px-8">
-          <Image
-            src="/images/about/about-sc.png"
+      <section aria-labelledby="about-heading" className="mt-0 flush-under-header">
+        <div className="mb-8 full-bleed">
+          <SmartImage
+            src="/images/about/about-1.webp"
             alt="HIV Clinical Fellowship banner"
             width={1200}
             height={300}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 1200px"
-            className="w-full h-auto rounded-lg"
+            sizes="100vw"
+            priority
+            quality={90}
+            className="w-full h-auto"
           />
         </div>
 
         <article className="space-y-10">
           <header className="space-y-4">
             <h1 id="about-heading" className="text-3xl sm:text-4xl font-bold text-center">{about.title}</h1>
-            <p className="text-center sm:text-left text-lg text-gray-700">{about.purpose}</p>
+            <h2 className="text-xl font-semibold">Purpose</h2>
+            <p className="text-left sm:text-left text-lg text-gray-700">{about.purpose}</p>
           </header>
 
           <section className="space-y-4">

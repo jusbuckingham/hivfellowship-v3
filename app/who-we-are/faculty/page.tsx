@@ -1,6 +1,6 @@
 import Layout from '../../../components/Layout';
 import faculty from '../../../data/faculty.json';
-import Image from 'next/image';
+import SmartImage from '../../../components/SmartImage';
 
 export default function FacultyPage() {
   return (
@@ -12,7 +12,7 @@ export default function FacultyPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {faculty.slice(0, 8).map((member, idx) => (
               <div key={idx} className="faculty-card flex flex-col items-center text-center pb-6">
-                <Image
+                <SmartImage
                   src={member.image}
                   width={100}
                   height={100}
@@ -33,7 +33,7 @@ export default function FacultyPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {faculty.slice(8).map((member, idx) => (
               <div key={idx} className="faculty-card flex flex-col items-center text-center pb-6">
-                <Image
+                <SmartImage
                   src={member.image}
                   width={100}
                   height={100}

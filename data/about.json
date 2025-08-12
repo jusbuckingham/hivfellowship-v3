@@ -2,7 +2,7 @@
   "title": "Welcome to the HIV Clinical Fellowship",
   "purpose": "As the HIV epidemic and workforce changes in the United States, there is an evolving need for physicians trained in the full-scope of HIV care, who can serve complex populations and become leaders in the field of HIV medicine.",
   "program": {
-    "description": "The HIV Clinical Fellowship is a two-year postdoctoral fellowship that trains primary care physicians in advanced HIV care and related fields, promotes scholarship and academic teaching skills of participating fellows.",
+    "description": "The HIV Clinical Fellowship is a two-year postdoctoral fellowship that trains primary care physicians in advanced HIV care and related fields, promotes scholarship and academic teaching skills of participating fellows. The program seeks qualified physicians who are:",
     "qualifiedPhysicians": [
       "Committed to providing comprehensive HIV care and prevention, notably for patients from highly impacted and vulnerable communities",
       "Dedicated to becoming leaders in healthcare, medical education, and patient advocacy",
@@ -16,7 +16,7 @@
   ],
   "description": [
     "This unique, two-year fellowship is designed for physicians trained in Family Medicine, Internal Medicine, or Med-Peds who are dedicated to advancing high-quality HIV primary and specialty care for underserved and vulnerable populations, including individuals experiencing homelessness, substance use disorders, incarceration, and those who are underinsured.",
-    "To date, the CLP has graduated over 30 fellows, many of whom now serve in diverse clinical and leadership roles across community health centers, academic medical institutions, and public health agencies."
+    "To date, the HCF has graduated over 30 fellows, many of whom now serve in diverse clinical and leadership roles across community health centers, academic medical institutions, and public health agencies."
   ],
   "coreTraining": [
     "HIV Primary Care",

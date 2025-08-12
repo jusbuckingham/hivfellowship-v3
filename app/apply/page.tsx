@@ -3,7 +3,7 @@
 import Layout from '../../components/Layout';
 import apply from '../../data/apply.json';
 import Link from 'next/link';
-import Image from 'next/image';
+import SmartImage from '../../components/SmartImage';
 import { useState, useEffect, useCallback } from 'react';
 
 const carouselImages = [
@@ -38,7 +38,7 @@ function Carousel({ images }: { images: { src: string; alt: string }[] }) {
         >
           {images.map((img, i) => (
             <div key={i} className="min-w-full">
-              <Image
+              <SmartImage
                 src={img.src}
                 alt={img.alt}
                 width={1200}

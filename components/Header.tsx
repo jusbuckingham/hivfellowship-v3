@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import Image from 'next/image';
+import SmartImage from './SmartImage';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -8,48 +8,51 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header role="banner" className="site-header w-full bg-[#1C297B]">
-      <div className="flex items-center justify-between w-full px-6 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8">
-        <Image
-          src="/images/header/hiv-fellowship-logo-white.png"
-          alt="HIV Clinical Fellowship Logo"
-          className="header-logo max-w-[50%] sm:max-w-[35%]"
-          width={150}
-          height={48}
-          priority
-        />
-        <nav className="header-nav flex flex-wrap justify-center gap-6" aria-label="Main navigation">
+    <header role="banner" className="site-header w-full bg-[#162363] full-bleed overflow-x-hidden">
+      <div className="flex items-center justify-between w-full px-0 py-0 sm:px-0 sm:py-0.5 md:px-0 md:py-1">
+        <div className="logo-slot flex-none w-[220px] md:w-[300px] xl:w-[360px]">
+          <SmartImage
+            src="/images/header/test-logo-ss.webp"
+            alt="HIV Clinical Fellowship Logo"
+            className="header-logo"
+            width={360}
+            height={104}
+            priority
+          />
+        </div>
+        <nav className="header-nav mx-auto flex items-center justify-center flex-1 min-w-0 whitespace-nowrap gap-10 md:gap-14 xl:gap-20 text-white text-base sm:text-[1.05rem] md:text-lg xl:text-xl" aria-label="Main navigation">
           <Link
             href="/"
-            className={`py-2 text-white hover:text-gray-200 ${pathname === '/' ? 'font-bold underline' : ''}`}
+            className={`py-0.5 sm:py-1 transition opacity-90 hover:opacity-100 ${pathname === '/' ? 'font-semibold' : 'font-medium'}`}
           >
             About
           </Link>
           <Link
             href="/program"
-            className={`py-2 text-white hover:text-gray-200 ${pathname === '/program' ? 'font-bold underline' : ''}`}
+            className={`py-0.5 sm:py-1 transition opacity-90 hover:opacity-100 ${pathname === '/program' ? 'font-semibold' : 'font-medium'}`}
           >
             Program
           </Link>
           <Link
             href="/curriculum"
-            className={`py-2 text-white hover:text-gray-200 ${pathname === '/curriculum' ? 'font-bold underline' : ''}`}
+            className={`py-0.5 sm:py-1 transition opacity-90 hover:opacity-100 ${pathname === '/curriculum' ? 'font-semibold' : 'font-medium'}`}
           >
             Curriculum
           </Link>
           <Link
             href="/who-we-are"
-            className={`py-2 text-white hover:text-gray-200 ${pathname === '/who-we-are' ? 'font-bold underline' : ''}`}
+            className={`py-0.5 sm:py-1 transition opacity-90 hover:opacity-100 ${pathname === '/who-we-are' ? 'font-semibold' : 'font-medium'}`}
           >
             Who We Are
           </Link>
           <Link
             href="/apply"
-            className={`py-2 text-white hover:text-gray-200 ${pathname === '/apply' ? 'font-bold underline' : ''}`}
+            className={`py-0.5 sm:py-1 transition opacity-90 hover:opacity-100 ${pathname === '/apply' ? 'font-semibold' : 'font-medium'}`}
           >
             Apply
           </Link>
         </nav>
+        <div className="logo-slot flex-none w-[220px] md:w-[300px] xl:w-[360px]" aria-hidden />
       </div>
     </header>
   );

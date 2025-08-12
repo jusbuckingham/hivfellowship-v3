@@ -3,7 +3,7 @@
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -19,7 +19,7 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["*"]
     },
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
@@ -30,7 +30,9 @@
     "next-env.d.ts",
     "app/**/*.{ts,tsx}",
     "components/**/*.{ts,tsx}",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "lib/**/*.{ts,tsx}",
+    "data/**/*.json"
   ],
   "exclude": ["node_modules"]
 }

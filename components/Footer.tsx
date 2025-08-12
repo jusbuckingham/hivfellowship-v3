@@ -1,14 +1,14 @@
 // components/Footer.tsx
 
 import React from 'react';
-import Image from 'next/image';
+import SmartImage from './SmartImage';
 
 export default function Footer() {
   return (
     <footer className="footer">
       {/* Full-width banner image */}
       <div className="footer-banner">
-        <Image
+        <SmartImage
           src="/images/footer/footer-banner-ss.png"
           alt="Los Angeles skyline"
           className="footer-banner-img"
@@ -21,8 +21,8 @@ export default function Footer() {
       {/* Logo strip */}
       <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <div className="footer-logos flex justify-center">
-          <Image
-            src="/images/footer/hiv-fellowship-logo-bar.png"
+          <SmartImage
+            src="/images/footer/logo-bar.webp"
             alt="Partner logos"
             className="footer-logo-bar w-full h-auto"
             width={1200}
