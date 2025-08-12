@@ -7,9 +7,9 @@ import SmartImage from '../../components/SmartImage';
 import { useState, useEffect, useCallback } from 'react';
 
 const carouselImages = [
-  { src: '/images/apply/hiv-fellowship-grads-1.jpeg', alt: 'HIV Fellowship graduates photo 1' },
-  { src: '/images/apply/hiv-fellowship-grads-2.png', alt: 'HIV Fellowship graduates photo 2' },
-  { src: '/images/apply/hiv-fellowship-grads-3.png', alt: 'HIV Fellowship graduates photo 3' },
+  { src: '/images/apply/grads-1.webp', alt: 'HIV Fellowship graduates photo 1' },
+  { src: '/images/apply/grads-2.webp', alt: 'HIV Fellowship graduates photo 2' },
+  { src: '/images/apply/grads-3.webp', alt: 'HIV Fellowship graduates photo 3' },
 ];
 
 function Carousel({ images }: { images: { src: string; alt: string }[] }) {
