@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <Layout>
       <section aria-labelledby="about-heading" className="mt-0 flush-under-header">
-        <div className="mb-8 full-bleed">
+        <div className="full-bleed">
           <SmartImage
             src="/images/about/about-1.webp"
             alt="HIV Clinical Fellowship banner"
@@ -20,10 +20,9 @@ export default function AboutPage() {
             className="w-full h-auto"
           />
         </div>
-        <div className="pt-4"></div>
 
         <article className="space-y-10">
-          <header className="space-y-4">
+          <header className="space-y-4 mt-6 sm:mt-8">
             <h1 id="about-heading" className="text-3xl sm:text-4xl font-bold text-center">{about.title}</h1>
             <h2 className="text-xl font-semibold">Purpose</h2>
             <p className="text-left sm:text-left text-lg text-gray-700">{about.purpose}</p>

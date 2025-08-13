@@ -35,6 +35,10 @@ body {
 .site-header + main {
   padding-top: clamp(12px, 2.5vw, 28px);
 }
+/* About page: keep the hero flush under the sticky header */
+.site-header + main:has(section[aria-labelledby="about-heading"]) {
+  padding-top: 0;
+}
 /* Make main a new block formatting context so first-child margins don’t collapse */
 main { display: flow-root; }
 
@@ -524,4 +528,10 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+/* Add spacing between About hero image and heading */
+section[aria-labelledby="about-heading"] > h2:first-of-type,
+section[aria-labelledby="about-heading"] > div:first-child + h2 {
+  margin-top: 1.5rem; /* adjust as needed for desired spacing */
 }
