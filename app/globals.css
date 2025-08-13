@@ -46,14 +46,17 @@ body {
 
 /* Header layout overrides to enforce slim height */
 .site-header > div {
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 @media (min-width: 640px) {
-  .site-header > div { padding-top: 0.3rem; padding-bottom: 0.3rem; }
+  .site-header > div { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 }
 @media (min-width: 768px) {
-  .site-header > div { padding-top: 0.45rem; padding-bottom: 0.45rem; }
+  .site-header > div { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+}
+@media (min-width: 1280px) {
+  .site-header > div { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 }
 
 .header-container {
@@ -70,24 +73,67 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   flex: 1;
-  gap: clamp(1rem, 3vw, 2.5rem);
+  gap: clamp(1rem, 6vw, 6rem);
 }
 
-.header-nav a {
-  color: #fff;
+/* Unified font styles for all header nav links and triggers */
+.header-nav a,
+.header-nav button,
+.header-nav .menu-trigger,
+.header-nav span[role="button"] {
+  color: #fff !important;
   text-decoration: none;
-  font-size: 1.125rem;
-  opacity: 0.95;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 700;
   letter-spacing: 0.01em;
+  line-height: 1.2;
   transition: opacity 0.2s ease-in-out;
   display: inline-flex;
   align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.header-nav a:hover {
+/* Added select styling to match header nav links */
+.header-nav select {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.header-nav button {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+.header-nav a:hover,
+.header-nav button:hover,
+.header-nav .menu-trigger:hover,
+.header-nav select:hover,
+.header-nav a:focus-visible,
+.header-nav button:focus-visible,
+.header-nav .menu-trigger:focus-visible,
+.header-nav select:focus-visible {
+  color: #fff;
   text-decoration: none;
-  opacity: 1;
+  background-color: var(--primary-purple);
+  outline: none;
 }
 
 .header-logo {
@@ -99,7 +145,7 @@ body {
 /* Keep logo visually sharp but within a slim bar */
 .site-header .logo-slot img {
   height: auto;
-  max-height: 44px; /* tighter for mobile */
+  max-height: 40px; /* tighter for mobile */
   width: auto;
   object-fit: contain;
   image-rendering: -webkit-optimize-contrast;
@@ -431,4 +477,39 @@ img {
     margin-left: calc(-50vw - var(--bleed-overscan));
     margin-right: calc(-50vw - var(--bleed-overscan));
   }
+}
+/* Program & Who dropdown menu panel styling */
+#program-menu, #who-menu {
+  backdrop-filter: saturate(180%) blur(6px);
+}
+
+/* Header dropdown shared styling */
+#program-menu, #who-menu {
+  background: var(--primary-purple) !important;              /* purple panel */
+  color: #ffffff !important;     /* white text by default */
+}
+#program-menu a, #who-menu a {
+  display: block;
+  padding: 0.75rem 1.25rem;        /* bigger hit area */
+  color: #ffffff !important;     /* white links */
+  text-decoration: none;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  text-decoration: none !important;
+}
+#program-menu a:hover, #program-menu a:focus-visible,
+#who-menu a:hover, #who-menu a:focus-visible {
+  background-color: #ffffff !important; /* extend white background on hover */
+  color: var(--primary-purple) !important;                          /* purple text on white */
+  outline: none;                           /* rely on contrast here */
+}
+
+/* Remove default browser styling on select elements */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
