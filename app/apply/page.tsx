@@ -30,7 +30,7 @@ function Carousel({ images }: { images: { src: string; alt: string }[] }) {
   }, [images.length]);
 
   return (
-    <div className="relative w-full sm:w-3/4 md:w-1/2 mx-auto">
+    <div className="relative w-full sm:w-11/12 md:w-3/4 lg:w-2/3 mx-auto">
       <div className="overflow-hidden rounded-lg">
         <div
           className="flex transition-transform duration-500 ease-in-out"
@@ -90,7 +90,7 @@ export default function ApplyPage() {
     <Layout>
       <article className="space-y-10 pb-12 px-4 sm:px-6 md:px-8">
         <header className="space-y-4 pt-8">
-          <div className="mt-8 mb-8">
+          <div className="mt-16 mb-8">
             <Carousel images={carouselImages} />
           </div>
           <div className="max-w-3xl mx-auto">

@@ -31,6 +31,13 @@ body {
   margin: 0;
 }
 
+/* Ensure consistent space below the sticky header and avoid margin-collapsing */
+.site-header + main {
+  padding-top: clamp(12px, 2.5vw, 28px);
+}
+/* Make main a new block formatting context so first-child margins don’t collapse */
+main { display: flow-root; }
+
 .site-header {
   background-color: var(--primary-purple); /* deep navy */
   color: #fff;
