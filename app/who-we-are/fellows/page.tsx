@@ -79,29 +79,43 @@ export default function FellowsPage() {
           <h2 className="text-2xl font-bold mt-10 uppercase">FELLOWSHIP ALUMNI</h2>
           {Array.from(new Set(alumni.map(a => a.classOf)))
             .sort((a, b) => b - a)
-            .map(year => (
-              <div key={year}>
-                <h3 className="purple-heading">Class of {year}</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4">
-                  {alumni
-                    .filter(a => a.classOf === year)
-                    .map((alum, idx) => (
-                      <div key={idx} className="fellow-card flex flex-col items-center text-center">
-                        <SmartImage
-                          src={alum.image}
-                          width={100}
-                          height={100}
-                          alt={alum.name}
-                          className="rounded-full mx-auto"
-                          loading="lazy"
-                          sizes="(max-width: 640px) 80px, (max-width: 1024px) 100px, 100px"
-                        />
-                        <h4 className="text-lg font-semibold mb-0 leading-tight">{alum.name}</h4>
+            .map((year) => {
+              const yearAlumni = alumni.filter((a) => a.classOf === year);
+
+              return (
+                <div key={year}>
+                  <h3 className="purple-heading">Class of {year}</h3>
+                  {(() => {
+                    const count = yearAlumni.length;
+                    const cols = count >= 4
+                      ? 'grid-cols-4'
+                      : count === 3
+                      ? 'grid-cols-3'
+                      : count === 2
+                      ? 'grid-cols-2'
+                      : 'grid-cols-1';
+                    return (
+                      <div className={`mt-4 grid ${cols} gap-12 place-items-center`}> 
+                        {yearAlumni.map((alum, idx) => (
+                          <div key={idx} className="fellow-card w-64 flex flex-col items-center text-center">
+                            <SmartImage
+                              src={alum.image}
+                              width={100}
+                              height={100}
+                              alt={alum.name}
+                              className="rounded-full mx-auto"
+                              loading="lazy"
+                              sizes="(max-width: 640px) 80px, (max-width: 1024px) 100px, 100px"
+                            />
+                            <h4 className="text-lg font-semibold mt-2 mb-0 leading-tight text-center break-words whitespace-normal">{alum.name}</h4>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    );
+                  })()}
                 </div>
-              </div>
-            ))}
+              );
+            })}
         </section>
 
         {/* Career Impact */}
