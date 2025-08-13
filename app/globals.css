@@ -40,6 +40,8 @@ body {
   z-index: 50;
   margin-bottom: 0;
   padding-block: 0.05rem;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Header layout overrides to enforce slim height */
@@ -60,7 +62,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .header-nav {
@@ -97,17 +99,17 @@ body {
 /* Keep logo visually sharp but within a slim bar */
 .site-header .logo-slot img {
   height: auto;
-  max-height: 64px; /* base size for mobile */
+  max-height: 44px; /* tighter for mobile */
   width: auto;
   object-fit: contain;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 @media (min-width: 640px) {
-  .site-header .logo-slot img { max-height: 90px; }
+  .site-header .logo-slot img { max-height: 72px; }
 }
 @media (min-width: 1024px) {
-  .site-header .logo-slot img { max-height: 108px; } /* ~50% larger than 72px */
+  .site-header .logo-slot img { max-height: 90px; }
 }
 
 /* Footer Styling */
@@ -234,14 +236,18 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0.22rem 0.55rem;
+    padding: 0.15rem 0.75rem; /* slimmer header */
+    flex-wrap: wrap;
+    row-gap: 0.25rem; /* tighten vertical spacing */
   }
 
   .header-nav {
     flex-basis: 100%;
-    margin-top: 0.5rem;
-    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.25rem;
+    gap: 0.25rem; /* smaller gaps between links */
     flex-wrap: wrap;
+    justify-content: center; /* center the links under the logo */
   }
   .header-nav ul {
     justify-content: center;
@@ -250,10 +256,11 @@ body {
 
   .header-nav a {
     margin: 0;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
+    padding: 0.35rem 0.5rem; /* smaller hit area */
+    font-size: 0.85rem; /* smaller text on mobile */
     text-align: center;
   }
+  .header-nav a { line-height: 1.1; }
 
   main, .application-form, article {
     padding: 0 1rem;
@@ -296,6 +303,8 @@ body {
   body {
     padding: 0;
   }
+
+  .site-header > div { padding-top: 0.1rem; padding-bottom: 0.1rem; }
 }
 
 @media (min-width: 1024px) {

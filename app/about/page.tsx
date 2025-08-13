@@ -20,6 +20,7 @@ export default function AboutPage() {
             className="w-full h-auto"
           />
         </div>
+        <div className="pt-4"></div>
 
         <article className="space-y-10">
           <header className="space-y-4">
