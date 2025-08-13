@@ -9,7 +9,7 @@ export default function FacultyPage() {
 
         <section className="space-y-8" aria-labelledby="leadership-heading">
           <h2 id="leadership-heading" className="text-xl sm:text-2xl font-semibold mb-4">Leadership</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 auto-rows-auto">
             {faculty.slice(0, 8).map((member, idx) => (
               <div key={idx} className="faculty-card flex flex-col items-center text-center pb-6">
                 <SmartImage
@@ -30,8 +30,8 @@ export default function FacultyPage() {
 
         <section className="space-y-8" aria-labelledby="clinical-team-heading">
           <h2 id="clinical-team-heading" className="text-xl sm:text-2xl font-semibold mb-4">Clinical Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            {faculty.slice(8).map((member, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 auto-rows-auto">
+            {faculty.slice(8, 17).map((member, idx) => (
               <div key={idx} className="faculty-card flex flex-col items-center text-center pb-6">
                 <SmartImage
                   src={member.image}

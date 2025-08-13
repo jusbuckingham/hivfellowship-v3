@@ -21,10 +21,10 @@ export default function BenefitsPage() {
 
         <section className="space-y-4 mb-6">
           <h2 className="text-xl sm:text-2xl font-semibold mb-4">Overview</h2>
-          <p className="text-gray-700 text-base sm:text-lg text-center sm:text-left">
+          <p className="text-gray-700 text-base sm:text-lg sm:text-left">
             <strong>Year 1</strong> is focused on academic coursework in partnership with the UCLA National Clinician Scholars program. Fellows will gain knowledge in health policy, research methods, community-based participatory research, pressing issues in healthcare, and executive leadership skills. Fellows will rotate through various HIV clinics, consult in the Emergency Department on acute care cases that require HIV specialty consultation, and will also begin to build their continuity clinic. Fellows will participate in regular case-based learning and didactic sessions on major HIV medicine topics including HIV multi-drug resistance and opportunistic infections.
           </p>
-          <p className="text-gray-700 text-base sm:text-lg text-center sm:text-left">
+          <p className="text-gray-700 text-base sm:text-lg sm:text-left">
             In <strong>Year 2</strong>, fellows will be expected to manage patients with more independent decision-making in specialty or elective rotations, as well as maintain their continuity care patient panels and precept first-year fellows, residents and students. Second-year fellows will spend a significant amount of time implementing their chosen scholarly project which will be presented at a regional/national conference and/or will be submitted for publication in a peer-reviewed journal.
           </p>
         </section>

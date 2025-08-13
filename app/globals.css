@@ -124,10 +124,12 @@ body {
 
 .header-nav a:hover,
 .header-nav button:hover,
+.header-nav span[role="button"]:hover,
 .header-nav .menu-trigger:hover,
 .header-nav select:hover,
 .header-nav a:focus-visible,
 .header-nav button:focus-visible,
+.header-nav span[role="button"]:focus-visible,
 .header-nav .menu-trigger:focus-visible,
 .header-nav select:focus-visible {
   color: #fff;
@@ -300,13 +302,15 @@ body {
     flex-direction: row;
   }
 
-  .header-nav a {
+  .header-nav a,
+  .header-nav button,
+  .header-nav span[role="button"] {
     margin: 0;
     padding: 0.35rem 0.5rem; /* smaller hit area */
     font-size: 0.85rem; /* smaller text on mobile */
     text-align: center;
+    line-height: 1.1;
   }
-  .header-nav a { line-height: 1.1; }
 
   main, .application-form, article {
     padding: 0 1rem;

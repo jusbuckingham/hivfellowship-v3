@@ -10,7 +10,7 @@ export default function PartnershipsPage() {
     <Layout>
       <article className="space-y-12 px-4 sm:px-6 md:px-8">
         <header className="space-y-4">
-          <h1 id="partnerships-heading" className="text-3xl sm:text-4xl font-bold">Partnerships</h1>
+          <h1 id="partnerships-heading" className="text-xl sm:text-2xl font-bold">Partnerships</h1>
         </header>
 
         <section className="space-y-8 mb-6">
