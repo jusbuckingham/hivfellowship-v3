@@ -9,7 +9,7 @@ export default function Footer() {
       {/* Full-width banner image */}
       <div className="footer-banner">
         <SmartImage
-          src="/images/footer/footer-banner-ss.png"
+          src="/images/footer/footer-banner-ss.webp"
           alt="Los Angeles skyline"
           className="footer-banner-img"
           width={1920}
