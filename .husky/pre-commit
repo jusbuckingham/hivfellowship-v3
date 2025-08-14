@@ -1,65 +1,63 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+set -e
 
-# Convert only STAGED PNG/JPG/JPEG under public/ → WEBP, delete originals,
-# and update references in app/, components/, pages/, data/.
-echo "pre-commit: processing staged images…"
+# Always run from repo root
+cd "$(git rev-parse --show-toplevel)"
 
-# Determine sed -i flag for macOS vs Linux
-if sed --version >/dev/null 2>&1; then
-  SED_I=(-i)
-else
-  SED_I=(-i '')
-fi
+echo "pre-commit: converting staged images to WebP…"
 
-# Get staged images
-STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM \
-  | grep -Ei '^public/.*\.(png|jpe?g)$' || true)
+# Helper: run sed -i cross-platform (GNU vs macOS/BSD)
+sed_inplace () {
+  # $1 = pattern; $2 = file
+  if sed --version >/dev/null 2>&1; then
+    # GNU sed
+    sed -i "$1" "$2"
+  else
+    # macOS/BSD sed requires a backup suffix (empty string)
+    sed -i '' "$1" "$2"
+  fi
+}
 
-[ -z "$STAGED_FILES" ] && exit 0
-
-changed_any=0
-
-for src in $STAGED_FILES; do
+# Convert only STAGED images in public/
+git diff --cached --name-only --diff-filter=ACM | grep -Ei '^public/.*\.(png|jpe?g)$' | while read -r src; do
   [ -f "$src" ] || continue
-  base_no_ext="${src%.*}"
-  ext="${src##*.}"
+
+  base_no_ext=${src%.*}
+  ext=${src##*.}
   dst="${base_no_ext}.webp"
 
   case "$ext" in
     png|PNG)
-      echo "  PNG → WEBP (lossless): $src -> $dst"
-      cwebp -lossless -m 6 "$src" -o "$dst" >/dev/null || exit 1
+      cwebp -lossless -m 6 "$src" -o "$dst" >/dev/null
       ;;
     jpg|JPG|jpeg|JPEG)
-      echo "  JPG → WEBP (q=80): $src -> $dst"
-      cwebp -q 80 -m 6 "$src" -o "$dst" >/dev/null || exit 1
+      cwebp -q 80 -m 6 "$src" -o "$dst" >/dev/null
       ;;
-    *) continue ;;
+    *)
+      continue
+      ;;
   esac
 
-  # Replace original with webp in the index and FS
+  # Replace original with .webp (index + filesystem)
   git rm -q --cached -- "$src" 2>/dev/null || true
   rm -f -- "$src"
   git add -- "$dst"
 
-  old_name="$(basename "$src")"
-  new_name="$(basename "$dst")"
+  old_name=$(basename "$src")
+  new_name=$(basename "$dst")
 
   # Update references in tracked files
   for d in app components pages data; do
     git ls-files "$d" 2>/dev/null | while read -r f; do
       [ -f "$f" ] || continue
-      # Only touch text files that mention the old name
       if grep -Iq . "$f" && grep -q "$old_name" "$f"; then
-        sed "${SED_I[@]}" "s|$old_name|$new_name|g" "$f"
+        sed_inplace "s|$old_name|$new_name|g" "$f"
         git add -- "$f"
       fi
     done
   done
-
-  changed_any=1
 done
 
-[ "$changed_any" -eq 1 ] && echo "pre-commit: converted to .webp and updated references."
+# Ensure changes are staged
+git add -A
 exit 0
