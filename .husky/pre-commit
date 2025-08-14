@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# --- config ---
+QUALITY="${QUALITY:-80}"                # JPEG quality (0–100). PNGs use lossless.
+SEARCH_DIRS=(app components pages data) # where to update references
+# --------------
+
+# Require cwebp
+if ! command -v cwebp >/dev/null 2>&1; then
+  echo "ERROR: cwebp not found. Install with 'brew install webp' (macOS) or 'sudo apt install webp' (Linux)."
+  exit 1
+fi
+
+# Detect sed flavor (macOS vs GNU)
+if sed --version >/dev/null 2>&1; then
+  SED_INPLACE=(sed -i)          # GNU sed
+else
+  SED_INPLACE=(sed -i '')       # BSD/macOS sed
+fi
+
+echo "pre-commit: scanning public/ for PNG/JPG (staged + unstaged)…"
+
+# Get ALL (tracked + untracked) files under public/, then filter by extension
+mapfile -t IMAGES < <(git ls-files -co --exclude-standard -- public | grep -Ei '\.(png|jpe?g)$' || true)
+
+# Nothing to do?
+[ ${#IMAGES[@]} -eq 0 ] && exit 0
+
+changed_any=0
+
+for src in "${IMAGES[@]}"; do
+  # Skip if the file was deleted between listing and now
+  [ -f "$src" ] || continue
+
+  base_no_ext="${src%.*}"
+  ext="${src##*.}"
+  dst="${base_no_ext}.webp"
+
+  # Convert
+  if [[ "$ext" =~ ^([Pp][Nn][Gg])$ ]]; then
+    echo "  PNG → WEBP (lossless): $src -> $dst"
+    cwebp -lossless -m 6 "$src" -o "$dst" >/dev/null
+  else
+    echo "  JPG → WEBP (q=$QUALITY): $src -> $dst"
+    cwebp -q "$QUALITY" -m 6 "$src" -o "$dst" >/dev/null
+  fi
+
+  # Remove original (both from index if tracked, and from FS), add new
+  git rm -q --cached -- "$src" 2>/dev/null || true
+  rm -f -- "$src"
+  git add -- "$dst"
+
+  old_name="$(basename "$src")"
+  new_name="$(basename "$dst")"
+
+  # Update references in tracked files inside SEARCH_DIRS
+  if [ ${#SEARCH_DIRS[@]} -gt 0 ]; then
+    mapfile -t CANDIDATES < <(git ls-files "${SEARCH_DIRS[@]}" 2>/dev/null || true)
+    for f in "${CANDIDATES[@]}"; do
+      # Only touch text files that reference the old filename
+      if [ -f "$f" ] && grep -Iq . "$f" && grep -q "$old_name" "$f"; then
+        "${SED_INPLACE[@]}" "s|$old_name|$new_name|g" "$f"
+        git add -- "$f"
+      fi
+    done
+  fi
+
+  changed_any=1
+done
+
+# Re-stage everything in case sed adjusted files
+git add -A
+
+if [ "$changed_any" -eq 1 ]; then
+  echo "pre-commit: converted images to .webp, deleted originals, updated references."
+fi
+
+exit 0

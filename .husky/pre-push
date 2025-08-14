@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+bad_files=$(git ls-files public | grep -Ei '\.(png|jpg|jpeg)$' || true)
+if [ -n "$bad_files" ]; then
+  echo "❌ Push blocked: Found non-WebP images in public/:"
+  echo "$bad_files"
+  echo "Convert them to .webp before pushing."
+  exit 1
+fi
