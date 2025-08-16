@@ -43,14 +43,15 @@ export default function Header() {
 
   return (
     <header role="banner" className="site-header w-full bg-[#162363]">
-      <div className="flex items-center justify-between w-full px-2 py-1 sm:px-4 sm:py-2 md:px-0 md:py-1 flex-wrap">
-        <div className="logo-slot flex-none w-[200px] sm:w-[260px] md:w-[360px] xl:w-[420px]">
+      <div className="flex items-center justify-between w-full px-2 py-3 sm:px-4 sm:py-4 md:px-0 md:py-3 flex-wrap">
+        <div className="logo-slot flex-none w-[350px] sm:w-[450px] md:w-[600px] xl:w-[735px]">
           <SmartImage
             src="/images/header/test-logo-ss.webp"
             alt="HIV Clinical Fellowship Logo"
-            className="header-logo"
-            width={420}
-            height={120}
+            className="header-logo max-w-none w-auto"
+            style={{ objectFit: 'contain' }}
+            width={735}
+            height={210}
             priority
           />
         </div>
@@ -148,7 +149,7 @@ export default function Header() {
             Apply
           </Link>
         </nav>
-        <div className="hidden sm:block logo-slot flex-none w-[160px] sm:w-[200px] md:w-[300px] xl:w-[360px]" aria-hidden />
+        <div className="hidden sm:block logo-slot flex-none w-[350px] sm:w-[450px] md:w-[600px] xl:w-[735px]" aria-hidden />
       </div>
     </header>
   );

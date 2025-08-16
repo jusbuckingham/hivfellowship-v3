@@ -50,24 +50,24 @@ main { display: flow-root; }
   top: 0;
   z-index: 50;
   margin-bottom: 0;
-  padding-block: 0.05rem;
+  padding-block: 0.3825rem; /* reduced from 0.45rem by 15% */
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Header layout overrides to enforce slim height */
 .site-header > div {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 640px) {
-  .site-header > div { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  .site-header > div { padding-top: 1rem; padding-bottom: 1rem; }
 }
 @media (min-width: 768px) {
-  .site-header > div { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  .site-header > div { padding-top: 1rem; padding-bottom: 1rem; }
 }
 @media (min-width: 1280px) {
-  .site-header > div { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  .site-header > div { padding-top: 1rem; padding-bottom: 1rem; }
 }
 
 .header-container {
@@ -154,22 +154,24 @@ main { display: flow-root; }
   flex-shrink: 0;
   height: auto;
   margin: 0;
+  width: auto;
+  height: auto;
 }
 
 /* Keep logo visually sharp but within a slim bar */
 .site-header .logo-slot img {
   height: auto;
-  max-height: 56px; /* tighter for mobile */
+  max-height: 50.625px; /* reduced from 56.25px by 10% */
   width: auto;
   object-fit: contain;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 @media (min-width: 640px) {
-  .site-header .logo-slot img { max-height: 72px; }
+  .site-header .logo-slot img { max-height: 64.8px; /* reduced from 72px by 10% */ }
 }
 @media (min-width: 1024px) {
-  .site-header .logo-slot img { max-height: 90px; }
+  .site-header .logo-slot img { max-height: 81px; /* reduced from 90px by 10% */ }
 }
 
 /* Footer Styling */
@@ -366,7 +368,7 @@ main { display: flow-root; }
     padding: 0;
   }
 
-  .site-header > div { padding-top: 0.1rem; padding-bottom: 0.1rem; }
+  .site-header > div { padding-top: 0.75rem; padding-bottom: 0.75rem; }
 }
 
 @media (min-width: 1024px) {
@@ -534,4 +536,27 @@ select {
 section[aria-labelledby="about-heading"] > h2:first-of-type,
 section[aria-labelledby="about-heading"] > div:first-child + h2 {
   margin-top: 1.5rem; /* adjust as needed for desired spacing */
+}
+/* Override logo image sizing in header with higher specificity */
+header .header-logo img {
+  max-height: 60.75px !important; /* reduced from 67.5px by 10% */
+  height: auto !important;
+  width: auto !important;
+}
+
+/* Force larger header logo sizing (target the actual <img class="header-logo">) */
+img.header-logo {
+  height: 81px !important; /* reduced from 90px by 10% */
+  width: auto !important;
+  max-height: none !important;
+  object-fit: contain;
+}
+@media (min-width: 640px) {
+  img.header-logo { height: 101.25px !important; /* reduced from 112.5px by 10% */ }
+}
+@media (min-width: 1024px) {
+  img.header-logo { height: 121.5px !important; /* reduced from 135px by 10% */ }
+}
+@media (min-width: 1280px) {
+  img.header-logo { height: 131.625px !important; /* reduced from 146.25px by 10% */ }
 }
