@@ -1,9 +1,20 @@
 #!/bin/sh
 set -e
 
+# Backfill PNG/JPG images to WebP across the repo and update references.
 # Usage:
 #   DRY_RUN=1 sh scripts/backfill-webp.sh   # preview only
 #   sh scripts/backfill-webp.sh             # convert + update + stage
+
+# Ensure required tools exist
+if ! command -v cwebp >/dev/null 2>&1; then
+  echo "Error: cwebp not found. Install via 'brew install webp' (macOS) or your package manager." >&2
+  exit 1
+fi
+if ! command -v git >/dev/null 2>&1; then
+  echo "Error: git not found." >&2
+  exit 1
+fi
 
 ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
 cd "$ROOT"
@@ -11,7 +22,7 @@ cd "$ROOT"
 DRY="${DRY_RUN:-0}"
 echo "Backfill WebP (repo-wide): scanning tracked files for PNG/JPG refs… (DRY_RUN=$DRY)"
 
-# sed -i cross-platform
+# sed -i cross-platform helper
 sed_inplace () {
   # $1 = pattern; $2 = file
   if sed --version >/dev/null 2>&1; then
@@ -30,13 +41,15 @@ REFS_TMP="$(mktemp)"
 for f in $CODE_FILES; do
   [ -f "$f" ] || continue
   if grep -Iq . "$f"; then
-    grep -IhoE '([A-Za-z0-9_./-]+)\.(png|jpg|jpeg)' "$f" || true
+    grep -IhoE '([A-Za-z0-9_./-]+)\.(png|jpg|jpeg|jfif|pjp|pjpeg|tif|tiff|bmp|heic|heif)' "$f" || true
   fi
 done | sort -u > "$REFS_TMP"
 
-# Fallback: also convert any leftover real files in public/
+# Also list all real PNG/JPG files under public/ (even if not referenced)
 FILES_TMP="$(mktemp)"
-find public -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) \
+find public -type f \
+  \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.jfif" -o -iname "*.pjp" -o -iname "*.pjpeg" \
+     -o -iname "*.tif" -o -iname "*.tiff" -o -iname "*.bmp" -o -iname "*.heic" -o -iname "*.heif" \) \
   -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/.next/*" \
   -not -path "*/dist/*" -not -path "*/build/*" \
   > "$FILES_TMP"
@@ -49,25 +62,44 @@ convert_one () {
   ext=${SRC##*.}
   dst="${base_no_ext}.webp"
 
+  # Skip if WebP already exists and is newer than source
+  if [ -f "$dst" ] && [ "$dst" -nt "$SRC" ]; then
+    return 0
+  fi
+
   case "$ext" in
+    # Skip formats we should not or cannot convert via cwebp here
+    webp|WEBP|svg|SVG|ico|ICO|avif|AVIF|gif|GIF|pdf|PDF)
+      return 0
+      ;;
+    # Keep PNG lossless
     png|PNG)
       if [ "$DRY" = "1" ]; then
         echo "would convert (lossless): $SRC -> $dst"
       else
-        cwebp -lossless -m 6 "$SRC" -o "$dst" >/dev/null
+        if ! cwebp -lossless -m 6 "$SRC" -o "$dst" >/dev/null 2>&1; then
+          echo "warn: cwebp failed for $SRC; skipping" >&2
+          return 0
+        fi
       fi
       ;;
-    jpg|JPG|jpeg|JPEG)
+    # Everything else lossy at q=80 (jpg/jpeg/jfif/pjp/pjpeg/tiff/tif/bmp/heic/heif, etc.)
+    *)
       if [ "$DRY" = "1" ]; then
         echo "would convert (q=80):     $SRC -> $dst"
       else
-        cwebp -q 80 -m 6 "$SRC" -o "$dst" >/dev/null
+        if ! cwebp -q 80 -m 6 "$SRC" -o "$dst" >/dev/null 2>&1; then
+          echo "warn: cwebp failed for $SRC; skipping" >&2
+          return 0
+        fi
       fi
       ;;
-    *)
-      return 0
-      ;;
   esac
+
+  # If conversion didn't produce a destination file, abort deletion
+  if [ ! -f "$dst" ]; then
+    return 0
+  fi
 
   if [ "$DRY" = "1" ]; then
     echo "would delete original:     $SRC"
@@ -145,4 +177,5 @@ done < "$FILES_TMP"
 [ "$DRY" != "1" ] && git add -A
 
 rm -f "$REFS_TMP" "$FILES_TMP" 2>/dev/null || true
+
 echo "Backfill WebP (repo-wide): done (DRY_RUN=$DRY)."

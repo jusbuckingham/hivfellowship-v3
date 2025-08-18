@@ -12,7 +12,7 @@ A modern, JSON‑driven website for the HIV Clinical Fellowship program. Built w
   - Faculty: Leadership (4×2), Clinical Team (3×3)
   - Fellows: current section unchanged; Alumni rows auto‑center and adapt (1, 2, 3, or 4+ across)
 - **Image Pipeline**: WebP‑first policy with automated conversion hooks
-  - Pre‑commit: converts staged/unstaged `public/**/*.png|jpg|jpeg` → real **.webp**, deletes originals, and updates references in `app/`, `components/`, `pages/`, `data/`
+  - Pre‑commit: converts staged/unstaged `public/**/*.{png,jpg,jpeg,jfif,pjp,pjpeg,tif,tiff,bmp,heic,heif}` → real **.webp**, deletes originals, and updates references in `app/`, `components/`, `pages/`, `data/`
   - Pre‑push: blocks pushes if any non‑WebP remain in `public/`
 - **Instant Deploys**: Vercel previews and production deploys
 
@@ -77,8 +77,7 @@ npm run build && npm start
 ```
 
 ### Husky hooks (already configured)
-- On commit: converts any `public/**/*.png|jpg|jpeg` → **.webp** (PNG lossless, JPEG quality 80), deletes originals, and updates references in `app/`, `components/`, `pages/`, `data/`.
-- On push: rejects the push if any non‑WebP images remain in `public/`.
+- On commit: converts any `public/**/*.{png,jpg,jpeg,jfif,pjp,pjpeg,tif,tiff,bmp,heic,heif}` → **.webp** (PNG lossless, others quality 80), deletes originals, and updates references in `app/`, `components/`, `pages/`, `data/`.
 
 > If hooks don’t run after cloning, ensure Husky is installed by running:
 > ```bash
@@ -88,13 +87,51 @@ npm run build && npm start
 ## 📸 Images & Assets
 
 - **WebP‑first**. Place images under `public/images/...` and reference them by path (Next.js serves from `/images/...`).
-- If you add PNG/JPGs under `public/`, the **pre‑commit** hook will convert them to real WebP and update references automatically.
-- For manual, one‑off conversion:
-```bash
-# Convert all PNG/JPG in public/ to WebP (quality 80) and keep originals
-find public -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) \
-  | while read -r f; do cwebp -q 80 "$f" -o "${f%.*}.webp"; done
-```
+- If you add supported formats (PNG, JPG, JPEG, JFIF, PJP, PJPEG, TIFF, BMP, HEIC, HEIF) under `public/`, the **pre‑commit** hook will convert them to WebP, delete the originals, and update references automatically.
+
+### 🔄 Image Workflow
+
+Adding new images is fully automated:
+
+1. **Drop images**  
+   Place any new raw images (PNG, JPG, JPEG, JFIF, PJP, PJPEG, TIFF, BMP, HEIC, HEIF) under `public/images/...`.
+
+2. **Reference in code**  
+   Use the original filename in your components/pages, e.g.:
+   ```tsx
+   <Image src="/images/who-we-are/fellows/new-fellow.jpg" alt="New Fellow" />
+   ```
+
+3. **Commit your changes**  
+   Run your normal Git flow:
+   ```bash
+   git add .
+   git commit -m "add new fellow photo"
+   ```
+
+   On commit, Husky will:
+   - Convert the image(s) to `.webp`
+   - Delete the originals
+   - Update code references to point to `.webp`
+
+4. **Push to deploy**  
+   By the time you push, the repo contains only `.webp` files, and your code is already updated.
+
+### ⚠️ Requirements
+
+The automated image pipeline depends on **cwebp** (part of Google’s WebP tools) being installed locally.
+
+- **macOS**:
+  ```bash
+  brew install webp
+  ```
+- **Ubuntu/Debian**:
+  ```bash
+  sudo apt-get install webp
+  ```
+- **Windows**: download from [Google WebP releases](https://developers.google.com/speed/webp/download) or install via package manager like Chocolatey.
+
+If `cwebp` is missing, the pre-commit hook will fail when you try to add new images.
 
 ## 🧭 Notable UI Details
 
