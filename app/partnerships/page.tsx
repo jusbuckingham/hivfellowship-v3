@@ -1,9 +1,11 @@
-// app/program/partnerships/page.tsx
+// app/partnerships/page.tsx
 
-import Layout from '../../../components/Layout';
-import data from '../../../data/partnerships.json';
+import Layout from '../../components/Layout';
+import data from '../../data/partnerships.json';
 
-const { partnerships, coreCollaborators } = data;
+type Partner = { name: string; description: string };
+interface PartnershipsData { partnerships: Partner[]; coreCollaborators: Partner[] }
+const { partnerships, coreCollaborators } = (data as PartnershipsData);
 
 export default function PartnershipsPage() {
   return (
@@ -15,7 +17,7 @@ export default function PartnershipsPage() {
         </header>
 
         <section className="space-y-6 rounded-xl border border-slate-200 bg-white shadow-sm p-6">
-          {partnerships.map((p, idx) => (
+          {partnerships.map((p: Partner, idx: number) => (
             <div key={idx} className="space-y-3">
               <h2 className="text-xl sm:text-2xl font-semibold text-slate-900">{p.name}</h2>
               <p className="text-slate-700 leading-relaxed">{p.description}</p>
@@ -25,7 +27,7 @@ export default function PartnershipsPage() {
 
         <section className="space-y-6 rounded-xl border border-slate-200 bg-white shadow-sm p-6">
           <h2 className="text-2xl font-semibold text-slate-900">Core Collaborators</h2>
-          {coreCollaborators.map((c, idx) => (
+          {coreCollaborators.map((c: Partner, idx: number) => (
             <div key={idx} className="space-y-2">
               <h3 className="text-lg sm:text-xl font-medium text-slate-800">{c.name}</h3>
               <p className="text-slate-700 leading-relaxed">{c.description}</p>
