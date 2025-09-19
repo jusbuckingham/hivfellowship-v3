@@ -1,43 +1,43 @@
-import Layout from '../../../components/Layout';
-import fellowsData from '../../../data/fellows.json';
-import SmartImage from '../../../components/SmartImage';
+import Layout from '../../components/Layout';
+import fellowsData from '../../data/fellows.json';
+import SmartImage from '../../components/SmartImage';
 
 export default function FellowsPage() {
   const { current: currentFellows, alumni, careerImpact } = fellowsData;
 
   return (
     <Layout>
-      <article className="space-y-10 px-4 md:px-8">
+      <article className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8 py-8 sm:py-10 lg:py-12 space-y-12">
         <header className="space-y-4">
-          <h1 className="text-4xl font-bold uppercase">CURRENT FELLOWS</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 text-center">Current Fellows</h1>
         </header>
 
         {/* Class of 2027 */}
         <section aria-labelledby="class-of-2027-heading">
           <h2
             id="class-of-2027-heading"
-            className="purple-heading mb-4"
+            className="purple-heading mb-6 text-xl sm:text-2xl font-semibold text-slate-900"
             style={{ scrollMarginTop: '4rem' }}
           >
             Class of 2027
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
             {currentFellows
               .filter(f => f.classOf === 2027)
               .map((fellow) => (
-                <div key={fellow.name} className="fellow-card flex flex-col items-center text-center">
+                <div key={fellow.name} className="fellow-card flex flex-col items-center text-center p-4 rounded-xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
                   <SmartImage
                     src={fellow.image}
                     width={120}
                     height={120}
                     alt={fellow.name}
-                    className="rounded-full"
+                    className="rounded-full ring-2 ring-slate-200"
                     loading="lazy"
                     sizes="(max-width: 640px) 96px, (max-width: 1024px) 120px, 120px"
                   />
-                  <h3 className="text-xl font-semibold mb-0 leading-tight">{fellow.name}</h3>
-                  <p className="text-sm text-gray-600 mt-0.5 mb-0 leading-tight">Class of {fellow.classOf}</p>
-                  <p className="text-gray-700 mt-3">{fellow.bio}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold mt-3 mb-0 leading-tight">{fellow.name}</h3>
+                  <p className="text-sm text-slate-600 mt-0.5 mb-0 leading-snug">Class of {fellow.classOf}</p>
+                  <p className="text-slate-700 mt-3 leading-relaxed text-sm sm:text-base">{fellow.bio}</p>
                 </div>
               ))}
           </div>
@@ -47,28 +47,28 @@ export default function FellowsPage() {
         <section aria-labelledby="class-of-2026-heading">
           <h2
             id="class-of-2026-heading"
-            className="purple-heading mb-4"
+            className="purple-heading mb-6 text-xl sm:text-2xl font-semibold text-slate-900"
             style={{ scrollMarginTop: '4rem' }}
           >
             Class of 2026
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
             {currentFellows
               .filter(f => f.classOf === 2026)
               .map((fellow) => (
-                <div key={fellow.name} className="fellow-card flex flex-col items-center text-center">
+                <div key={fellow.name} className="fellow-card flex flex-col items-center text-center p-4 rounded-xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
                   <SmartImage
                     src={fellow.image}
                     width={120}
                     height={120}
                     alt={fellow.name}
-                    className="rounded-full"
+                    className="rounded-full ring-2 ring-slate-200"
                     loading="lazy"
                     sizes="(max-width: 640px) 96px, (max-width: 1024px) 120px, 120px"
                   />
-                  <h3 className="text-xl font-semibold mb-0 leading-tight">{fellow.name}</h3>
-                  <p className="text-sm text-gray-600 mt-0.5 mb-0 leading-tight">Class of {fellow.classOf}</p>
-                  <p className="text-gray-700 mt-3">{fellow.bio}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold mt-3 mb-0 leading-tight">{fellow.name}</h3>
+                  <p className="text-sm text-slate-600 mt-0.5 mb-0 leading-snug">Class of {fellow.classOf}</p>
+                  <p className="text-slate-700 mt-3 leading-relaxed text-sm sm:text-base">{fellow.bio}</p>
                 </div>
               ))}
           </div>
@@ -76,7 +76,7 @@ export default function FellowsPage() {
 
         {/* Fellowship Alumni */}
         <section>
-          <h2 className="text-2xl font-bold mt-10 uppercase">FELLOWSHIP ALUMNI</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 text-center uppercase">Fellowship Alumni</h2>
           {Array.from(new Set(alumni.map(a => a.classOf)))
             .sort((a, b) => b - a)
             .map((year) => {
@@ -97,17 +97,17 @@ export default function FellowsPage() {
                     return (
                       <div className={`mt-4 grid ${cols} gap-12 place-items-center`}> 
                         {yearAlumni.map((alum, idx) => (
-                          <div key={idx} className="fellow-card w-64 flex flex-col items-center text-center">
+                          <div key={idx} className="fellow-card w-48 sm:w-56 flex flex-col items-center text-center p-3 rounded-xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
                             <SmartImage
                               src={alum.image}
                               width={100}
                               height={100}
                               alt={alum.name}
-                              className="rounded-full mx-auto"
+                              className="rounded-full ring-2 ring-slate-200 mx-auto"
                               loading="lazy"
                               sizes="(max-width: 640px) 80px, (max-width: 1024px) 100px, 100px"
                             />
-                            <h4 className="text-lg font-semibold mt-2 mb-0 leading-tight text-center break-words whitespace-normal">{alum.name}</h4>
+                            <h4 className="text-base sm:text-lg font-semibold mt-2 mb-0 leading-snug break-words whitespace-normal text-slate-900">{alum.name}</h4>
                           </div>
                         ))}
                       </div>
@@ -120,16 +120,16 @@ export default function FellowsPage() {
 
         {/* Career Impact */}
         <section>
-          <h2 className="text-2xl font-semibold mt-10">Career Impact</h2>
-          <p className="text-gray-700 mt-4">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 text-center">Career Impact</h2>
+          <p className="text-slate-700 leading-relaxed max-w-3xl mx-auto text-center mt-4">
             Graduates of the program have gone on to hold influential leadership roles such as:
           </p>
-          <ul className="list-disc pl-6 space-y-1 text-gray-700 mt-2">
+          <ul className="list-disc pl-6 space-y-1 text-slate-700 leading-relaxed max-w-3xl mx-auto text-center mt-2">
             {careerImpact.slice(0, -1).map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
           </ul>
-          <p className="text-gray-700 mt-4">
+          <p className="text-slate-700 leading-relaxed max-w-3xl mx-auto text-center mt-4">
             {careerImpact[careerImpact.length - 1]}
           </p>
         </section>

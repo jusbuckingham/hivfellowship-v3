@@ -1,475 +1,82 @@
-/* include border-box for consistent sizing */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Ensure header navigation wraps and centers on all screens */
+/* include border-box for consistent sizing */
+*, *::before, *::after { box-sizing: border-box; }
 
 /* Prevent horizontal overflow */
-html, body {
-  overflow-x: hidden;
-}
+html, body { overflow-x: hidden; }
 
-/* Custom overrides */
 :root {
   --background: #ffffff;
   --foreground: #1f2937;
   --primary-purple: #162363;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   background: var(--background);
   color: var(--foreground);
   margin: 0;
-}
-
-/* Ensure consistent space below the sticky header and avoid margin-collapsing */
-.site-header + main {
-  padding-top: clamp(12px, 2.5vw, 28px);
-}
-/* About page: keep the hero flush under the sticky header */
-.site-header + main:has(section[aria-labelledby="about-heading"]) {
-  padding-top: 0;
-}
-/* Make main a new block formatting context so first-child margins don’t collapse */
-main { display: flow-root; }
-
-.site-header {
-  background-color: var(--primary-purple); /* deep navy */
-  color: #fff;
-  box-shadow: none;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  margin-bottom: 0;
-  padding-block: 0.3825rem; /* reduced from 0.45rem by 15% */
-  width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* Header layout overrides to enforce slim height */
-.site-header > div {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-@media (min-width: 640px) {
-  .site-header > div { padding-top: 1rem; padding-bottom: 1rem; }
-}
-@media (min-width: 768px) {
-  .site-header > div { padding-top: 1rem; padding-bottom: 1rem; }
-}
-@media (min-width: 1280px) {
-  .site-header > div { padding-top: 1rem; padding-bottom: 1rem; }
-}
-
-.header-container {
-  width: 100%;
-  padding: 0.41rem 1.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
-
-.header-nav {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  flex: 1;
-  gap: clamp(1rem, 6vw, 6rem);
-}
-
-/* Unified font styles for all header nav links and triggers */
-.header-nav a,
-.header-nav button,
-.header-nav .menu-trigger,
-.header-nav span[role="button"] {
-  color: #fff !important;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  line-height: 1.2;
-  transition: opacity 0.2s ease-in-out;
-  display: inline-block;
-  vertical-align: middle;
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-/* Added select styling to match header nav links */
-.header-nav select {
-  font-family: inherit;
-  color: inherit;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+/* Header styling */
+.site-header {
+  background-color: var(--primary-purple);
+  padding: 0.75rem 1rem;
 }
-
-.header-nav button {
-  background: transparent !important;
-  border: 0 !important;
-  padding: 0 !important;
+.site-header nav ul {
+  display: flex;
+  gap: 2rem; /* increased spacing between links */
+  align-items: center;
 }
-
-.header-nav a:hover,
-.header-nav button:hover,
-.header-nav span[role="button"]:hover,
-.header-nav .menu-trigger:hover,
-.header-nav select:hover,
-.header-nav a:focus-visible,
-.header-nav button:focus-visible,
-.header-nav span[role="button"]:focus-visible,
-.header-nav .menu-trigger:focus-visible,
-.header-nav select:focus-visible {
+.site-header a {
   color: #fff;
   text-decoration: none;
-  background-color: var(--primary-purple);
-  outline: none;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+}
+.site-header a:hover,
+.site-header a:focus {
+  color: #e0e0e0;
 }
 
-.header-logo {
-  flex-shrink: 0;
-  height: auto;
-  margin: 0;
-  width: auto;
-  height: auto;
-}
+/* Ensure consistent space below the sticky header */
+.site-header + main { padding-top: 80px; }
 
-/* Keep logo visually sharp but within a slim bar */
-.site-header .logo-slot img {
-  height: auto;
-  max-height: 50.625px; /* reduced from 56.25px by 10% */
-  width: auto;
-  object-fit: contain;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
-@media (min-width: 640px) {
-  .site-header .logo-slot img { max-height: 64.8px; /* reduced from 72px by 10% */ }
-}
+/* Desktop main width */
 @media (min-width: 1024px) {
-  .site-header .logo-slot img { max-height: 81px; /* reduced from 90px by 10% */ }
+  main { max-width: 1024px; margin: 0 auto; padding: 0 1rem; }
 }
 
-/* Footer Styling */
-.footer-text {
-  background-color: var(--primary-purple); /* match header purple */
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem 2rem;
-}
-
-.footer-text p {
-  margin: 0.25rem 0;
-  font-size: 0.875rem;
-}
-
-/* Footer logos */
-.footer-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  background-color: #ffffff;
-  padding: 1.5rem 2rem;
-}
-
-.footer-logo {
-  max-height: 60px;
-  width: auto;
-}
-
-/* Accessibility & responsive nav */
-
-.header-nav a:focus-visible {
-  outline: 2px dashed #ffffff;
-  outline-offset: 4px;
-}
-
-/* Purple section heading for Class of... */
-.purple-heading {
-  background-color: var(--primary-purple);
-  color: #fff;
-  display: block;
-  width: 100%;
-  margin-left: 0;
-  padding: 0.75rem 1.5rem;
-  margin-top: 2rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* Application form styling */
-.application-form {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.application-form h2 {
-  margin-bottom: 1.5rem;
-  font-size: 1.75rem;
-}
-
-.application-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: #1f2937;
-}
-
-.application-form input,
-.application-form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 0.375rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  color: #1f2937;
-}
-
-.application-form button {
-  display: inline-block;
-  width: 100%;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--primary-purple);
-  color: #ffffff;
-  border: none;
-  border-radius: 0.375rem;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-
-.application-form button:hover {
-  filter: brightness(0.9);
-  transform: scale(1.05);
-}
-
-.application-form button:focus-visible {
-  outline: 3px solid #9f9fee;
-  outline-offset: 2px;
-}
-
-/* Full-width footer banner */
-.footer-banner {
-  width: 100%;
-  margin: 0;
-}
-
-.footer-banner-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Responsive header for mobile */
-@media (max-width: 640px) {
-  .header-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.15rem 0.75rem; /* slimmer header */
-    flex-wrap: wrap;
-    row-gap: 0.25rem; /* tighten vertical spacing */
-  }
-
-  .header-nav {
-    flex-basis: 100%;
-    width: 100%;
-    margin-top: 0.25rem;
-    gap: 0.25rem; /* smaller gaps between links */
-    flex-wrap: wrap;
-    justify-content: center; /* center the links under the logo */
-  }
-  .header-nav ul {
-    justify-content: center;
-    flex-direction: row;
-  }
-
-  .header-nav a,
-  .header-nav button,
-  .header-nav span[role="button"] {
-    margin: 0;
-    padding: 0.35rem 0.5rem; /* smaller hit area */
-    font-size: 0.85rem; /* smaller text on mobile */
-    text-align: center;
-    line-height: 1.1;
-  }
-
-  main, .application-form, article {
-    padding: 0 1rem;
-  }
-
-  .application-form {
-    width: 100%;
-    margin: 1rem auto;
-    padding: 1rem;
-  }
-  .application-form h2 {
-    font-size: 1.5rem;
-  }
-  .application-form input,
-  .application-form textarea {
-    padding: 0.5rem;
-    font-size: 0.9rem;
-  }
-
-  /* Footer banner */
-  .footer-banner {
-    width: 100%;
-  }
-
-  /* Override full-viewport headings on mobile */
-  .purple-heading {
-    width: 100%;
-    margin-left: 0;
-    padding: 0.75rem 1rem;
-  }
-
-  /* Add horizontal padding to footer sections */
-  .footer-text,
-  .footer-logos {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  /* Remove any global body padding on mobile */
-  body {
-    padding: 0;
-  }
-
-  .site-header > div { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-}
-
-@media (min-width: 1024px) {
-  main {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-}
-/* Remove main side padding when About banner is present */
-@media (min-width: 1024px) {
-  main:has(section[aria-labelledby="about-heading"]) {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-@media (max-width: 640px) {
-  main:has(section[aria-labelledby="about-heading"]) {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-/* Combined footer logo bar */
-.footer-logo-bar {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Faculty card spacing tweaks */
-.faculty-card { margin-bottom: 2rem !important; padding-bottom: 0.5rem; }
-.faculty-card img { margin-bottom: 0.35rem; }
-.faculty-card h3 { margin: 0 !important; line-height: 1.15; }
-.faculty-card p { margin: 0.1rem 0 0 0 !important; line-height: 1.15; }
-
-/* Fellow card spacing tweaks */
-.fellow-card { margin-bottom: 2rem !important; padding-bottom: 0.5rem; }
-.fellow-card img { margin-bottom: 0.35rem; }
-.fellow-card h3 { margin: 0 !important; line-height: 1.15; }
-.fellow-card p { line-height: 1.5; }
-.fellow-card p:nth-of-type(1) { /* the Class of … line right under the name */
-  margin-top: 0.1rem !important;
-  margin-bottom: 0 !important;
-  line-height: 1.15;
-}
-
-/* Full-bleed utility for edge-to-edge media (handles scrollbars & zoom) */
+/* Full-bleed utility for edge-to-edge media */
 .full-bleed {
-  --bleed-overscan: 3px; /* extend a hair past edges to avoid 1px gaps */
+  --bleed-overscan: 3px;
   position: relative;
   width: calc(100dvw + (2 * var(--bleed-overscan)));
   max-width: calc(100dvw + (2 * var(--bleed-overscan)));
   left: 50%;
-  right: 50%;
   margin-left: calc(-50dvw - var(--bleed-overscan));
-  margin-right: calc(-50dvw - var(--bleed-overscan));
 }
-/* Fallback for browsers without dvw */
 @supports not (width: 100dvw) {
   .full-bleed {
     width: calc(100vw + (2 * var(--bleed-overscan)));
     max-width: calc(100vw + (2 * var(--bleed-overscan)));
     margin-left: calc(-50vw - var(--bleed-overscan));
-    margin-right: calc(-50vw - var(--bleed-overscan));
-  }
-}
-
-/* Optional helper: pull first section up if any top margin remains */
-.flush-under-header {
-  margin-top: 0 !important;
-}
-
-/* About page: make the first banner full-bleed under the header */
-section[aria-labelledby="about-heading"] > div:first-child {
-  --bleed-overscan: 3px;
-  position: relative;
-  max-width: calc(100dvw + (2 * var(--bleed-overscan)));
-  width: calc(100dvw + (2 * var(--bleed-overscan)));
-  left: 50%;
-  right: 50%;
-  margin-left: calc(-50dvw - var(--bleed-overscan));
-  margin-right: calc(-50dvw - var(--bleed-overscan));
-  margin-top: 0;
-  display: block;
-}
-@supports not (width: 100dvw) {
-  section[aria-labelledby="about-heading"] > div:first-child {
-    max-width: calc(100vw + (2 * var(--bleed-overscan)));
-    width: calc(100vw + (2 * var(--bleed-overscan)));
-    margin-left: calc(-50vw - var(--bleed-overscan));
-    margin-right: calc(-50vw - var(--bleed-overscan));
   }
 }
 
 /* Generic full-width image rule */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+img { max-width: 100%; height: auto; display: block; }
+
+/* Mobile menu */
+#mobile-menu { will-change: max-height, opacity; }
+#mobile-menu[aria-hidden="true"] { max-height: 0; overflow: hidden; }
 
 /* Reduced motion helper */
 @media (prefers-reduced-motion: reduce) {
@@ -477,86 +84,4 @@ img {
     transition: none !important;
     animation: none !important;
   }
-}
-/* Ensure .full-bleed header uses robust full-bleed utility */
-.site-header.full-bleed {
-  --bleed-overscan: 3px;
-  width: calc(100dvw + (2 * var(--bleed-overscan)));
-  max-width: calc(100dvw + (2 * var(--bleed-overscan)));
-  margin-left: calc(-50dvw - var(--bleed-overscan));
-  margin-right: calc(-50dvw - var(--bleed-overscan));
-  left: 50%;
-  right: 50%;
-}
-@supports not (width: 100dvw) {
-  .site-header.full-bleed {
-    width: calc(100vw + (2 * var(--bleed-overscan)));
-    max-width: calc(100vw + (2 * var(--bleed-overscan)));
-    margin-left: calc(-50vw - var(--bleed-overscan));
-    margin-right: calc(-50vw - var(--bleed-overscan));
-  }
-}
-/* Program & Who dropdown menu panel styling */
-#program-menu, #who-menu {
-  backdrop-filter: saturate(180%) blur(6px);
-}
-
-/* Header dropdown shared styling */
-#program-menu, #who-menu {
-  background: var(--primary-purple) !important;              /* purple panel */
-  color: #ffffff !important;     /* white text by default */
-}
-#program-menu a, #who-menu a {
-  display: block;
-  padding: 0.75rem 1.25rem;        /* bigger hit area */
-  color: #ffffff !important;     /* white links */
-  text-decoration: none;
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  font-size: 1.125rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1.25;
-  text-decoration: none !important;
-}
-#program-menu a:hover, #program-menu a:focus-visible,
-#who-menu a:hover, #who-menu a:focus-visible {
-  background-color: #ffffff !important; /* extend white background on hover */
-  color: var(--primary-purple) !important;                          /* purple text on white */
-  outline: none;                           /* rely on contrast here */
-}
-
-/* Remove default browser styling on select elements */
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-/* Add spacing between About hero image and heading */
-section[aria-labelledby="about-heading"] > h2:first-of-type,
-section[aria-labelledby="about-heading"] > div:first-child + h2 {
-  margin-top: 1.5rem; /* adjust as needed for desired spacing */
-}
-/* Override logo image sizing in header with higher specificity */
-header .header-logo img {
-  max-height: 60.75px !important; /* reduced from 67.5px by 10% */
-  height: auto !important;
-  width: auto !important;
-}
-
-/* Force larger header logo sizing (target the actual <img class="header-logo">) */
-img.header-logo {
-  height: 81px !important; /* reduced from 90px by 10% */
-  width: auto !important;
-  max-height: none !important;
-  object-fit: contain;
-}
-@media (min-width: 640px) {
-  img.header-logo { height: 101.25px !important; /* reduced from 112.5px by 10% */ }
-}
-@media (min-width: 1024px) {
-  img.header-logo { height: 121.5px !important; /* reduced from 135px by 10% */ }
-}
-@media (min-width: 1280px) {
-  img.header-logo { height: 131.625px !important; /* reduced from 146.25px by 10% */ }
 }

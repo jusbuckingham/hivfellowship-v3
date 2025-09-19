@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "strict": true,
     "noEmit": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -19,12 +22,16 @@
       }
     ],
     "paths": {
-      "@/*": ["*"]
+      "@/*": [
+        "./app/*",
+        "./components/*",
+        "./lib/*",
+        "./data/*"
+      ]
     },
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
-    "rootDir": ".",
-    "outDir": "dist"
+    "allowJs": true
   },
   "include": [
     "next-env.d.ts",
@@ -34,5 +41,7 @@
     "lib/**/*.{ts,tsx}",
     "data/**/*.json"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

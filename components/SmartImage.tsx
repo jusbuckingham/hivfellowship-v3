@@ -2,7 +2,7 @@
 import Image, { ImageProps } from 'next/image';
 
 // Require `alt` to satisfy a11y lint rule and improve DX
-export type SmartImageProps = ImageProps & { alt: string };
+export type SmartImageProps = Omit<ImageProps, "alt"> & { alt: string | "" };
 
 export default function SmartImage({ alt, priority, sizes, quality, ...rest }: SmartImageProps) {
   return (
